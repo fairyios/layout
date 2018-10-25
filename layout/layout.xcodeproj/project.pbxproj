@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C5727672182213300AADF3C /* UITableViewCellReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5727662182213300AADF3C /* UITableViewCellReusable.swift */; };
 		2CEED6CE2181F81B007B0374 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEED6CD2181F81B007B0374 /* AppDelegate.swift */; };
 		2CEED6D02181F81B007B0374 /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEED6CF2181F81B007B0374 /* TableController.swift */; };
 		2CEED6D32181F81B007B0374 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CEED6D12181F81B007B0374 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C5727662182213300AADF3C /* UITableViewCellReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellReusable.swift; sourceTree = "<group>"; };
 		2CEED6CA2181F81B007B0374 /* layout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = layout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CEED6CD2181F81B007B0374 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CEED6CF2181F81B007B0374 /* TableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 		2CEED6E02181FE1F007B0374 /* tables */ = {
 			isa = PBXGroup;
 			children = (
+				2C5727662182213300AADF3C /* UITableViewCellReusable.swift */,
 			);
 			path = tables;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 			files = (
 				2CEED6D02181F81B007B0374 /* TableController.swift in Sources */,
 				2CEED6CE2181F81B007B0374 /* AppDelegate.swift in Sources */,
+				2C5727672182213300AADF3C /* UITableViewCellReusable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
