@@ -8,9 +8,20 @@
 
 import UIKit
 
+
+/// MARK - 详情页面
 class DetailController: UITableViewController {
     
     var  area: AreaModel? = nil
+    
+    
+    @IBOutlet weak var topImage: UIImageView!
+    @IBOutlet weak var txtAddress: UITextField!
+    @IBOutlet weak var txtArea: UITextField!
+    @IBOutlet weak var txtRemark: UITextField!
+    @IBOutlet weak var btnSave: UIButton!
+    
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,13 +40,35 @@ class DetailController: UITableViewController {
         self.navigationItem.rightBarButtonItem?.tintColor = UIColor.white
         
         guard area != nil else { return }
-        
-        
-        
-        
+         
+        self.topImage.frame.size.height = self.view.frame.size.width
+        self.topImage.image = UIImage(named: (area?.Image)!)
+        self.txtAddress.text = self.area?.Address
+        self.txtArea.text = self.area?.Area
+        self.txtRemark.text = self.area?.Remark
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    
+    /// 保存
+    ///
+    /// - Parameter sender: sender description
+    @IBAction func actionAction(_ sender: Any) {
+        area?.Address = txtAddress.text
+        area?.Area = txtArea.text
+        area?.Remark = txtRemark.text
+    }
+    
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return 1
+//    }
+//
+//    
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//
+//    }
 }
+
