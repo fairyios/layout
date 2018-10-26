@@ -103,7 +103,7 @@
                                             <outlet property="rightAddress" destination="1ED-6t-jci" id="mKY-EE-6FG"/>
                                             <outlet property="rightArea" destination="klV-69-3tv" id="9Mg-eY-azB"/>
                                             <outlet property="rightRemark" destination="WcS-jf-rVU" id="Gmx-OK-lM7"/>
-                                            <segue destination="dSk-Rc-ZJN" kind="showDetail" identifier="detailSegue" id="g0F-DP-oxi"/>
+                                            <segue destination="dSk-Rc-ZJN" kind="show" identifier="detailSegue" id="g0F-DP-oxi"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -172,7 +172,7 @@
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.94546109440000003" green="0.64258676770000001" blue="0.98290890460000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.94546109440000003" green="0.64258676770000001" blue="0.98290890460000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
