@@ -33,6 +33,42 @@ class TableController: UIViewController {
 // MARK: - UITableViewDelegate
 extension TableController : UITableViewDelegate {
     
+    
+    /// 选中第几行
+    ///
+    /// - Parameters:
+    ///   - tableView: tableView description
+    ///   - indexPath: indexPath description
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("didSelectRowAt=\(indexPath.row)")
+    }
+    
+    
+    /// 在一行调用减号或加号按钮后（基于单元格的UITableViewCellEditingStyle），dataSource必须提交更改
+    /// 不使用UITableViewRowAction调用编辑操作 - 将调用操作的处理程序
+    /// - Parameters:
+    ///   - tableView: tableView description
+    ///   - editingStyle: editingStyle description
+    ///   - indexPath: indexPath description
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    
+    }
+    
+//    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+//
+//    }
+    
+    
+    /// Tells the delegate that the table view has left editing mode.
+    ///    当用户在indexPath标识的行上滑动进入模式后，表视图退出编辑模式时，将调用其方法。
+    ///    结果，行中出现删除按钮; 但是，在这个“????刷卡删除”???? 模式表视图不显示任何插入，
+    ///    删除和重新排序控件。 当输入这个“????刷卡删除”???? 编辑模式，表视图发送一个
+    /// - Parameters:
+    ///   - tableView: tableView description
+    ///   - indexPath: indexPath description
+    func tableView(_ tableView: UITableView, didEndEditingRowAt indexPath: IndexPath?) {
+        print("didEndEditingRowAt")
+    }
 }
 
 
