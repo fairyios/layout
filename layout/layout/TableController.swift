@@ -10,8 +10,15 @@ import UIKit
 
 class TableController: UIViewController {
 
+    var areas: [AreaModel] = AreaModel.getDemos()
+    
+    
+    @IBOutlet weak var myTableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -40,7 +47,7 @@ extension TableController : UITableViewDataSource {
     ///   - section: section description
     /// - Returns: return value description
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return areas.count
     }
     
     
@@ -52,7 +59,18 @@ extension TableController : UITableViewDataSource {
     ///   - indexPath: indexPath description
     /// - Returns: return value description
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reusableCell", for: indexPath)
+        
+        let area = areas[indexPath.row]
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reusableCell", for: indexPath) as! UITableViewCellReusable
+        cell.leftImage.image = UIImage(named: area.Image)
+        cell.rightAddress.text = area.Address
+        cell.rightArea.text = area.Area
+        cell.rightRemark.text = area.Remark
+        
+        cell.leftImage.backgroundColor = UIColor.white
+        cell.leftImage.layer.cornerRadius = (cell.leftImage.frame.size.width)/2
+        cell.leftImage.clipsToBounds = true
         return cell
     }
     

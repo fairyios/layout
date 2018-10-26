@@ -33,7 +33,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CSy-p5-tSd" userLabel="外边框">
-                                                    <rect key="frame" x="10" y="10" width="647" height="59.5"/>
+                                                    <rect key="frame" x="10" y="10" width="355" height="59.5"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baiyun" highlightedImage="baiyun" translatesAutoresizingMaskIntoConstraints="NO" id="Xpa-Uh-xRg">
                                                             <rect key="frame" x="0.0" y="0.0" width="59.5" height="59.5"/>
@@ -42,13 +42,29 @@
                                                                 <constraint firstAttribute="width" constant="59.5" id="dtV-CZ-hTg"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Dy-8Z-Pr9">
-                                                            <rect key="frame" x="69.5" y="0.0" width="577.5" height="59.5"/>
-                                                            <color key="backgroundColor" red="1" green="0.22098772459999999" blue="0.14438295709999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fWg-kn-2GU">
+                                                            <rect key="frame" x="69.5" y="0.0" width="285.5" height="59.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="地址地址地址地址地址地址地址地址地址地址地址" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ED-6t-jci">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="285.5" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="区域" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klV-69-3tv">
+                                                                    <rect key="frame" x="0.0" y="20.5" width="285.5" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="备注" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WcS-jf-rVU">
+                                                                    <rect key="frame" x="0.0" y="41" width="285.5" height="18.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
                                                     </subviews>
                                                     <color key="backgroundColor" red="1" green="0.22098772459999999" blue="0.14438295709999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </stackView>
@@ -82,6 +98,12 @@
                                             </variation>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="leftImage" destination="Xpa-Uh-xRg" id="yho-n9-QhE"/>
+                                            <outlet property="rightAddress" destination="1ED-6t-jci" id="mKY-EE-6FG"/>
+                                            <outlet property="rightArea" destination="klV-69-3tv" id="9Mg-eY-azB"/>
+                                            <outlet property="rightRemark" destination="WcS-jf-rVU" id="Gmx-OK-lM7"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -101,6 +123,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="列表页面" id="NZG-Vk-GIO"/>
+                    <connections>
+                        <outlet property="myTableView" destination="K1B-Mj-GWZ" id="m1D-Bq-RVQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

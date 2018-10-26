@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2C5727672182213300AADF3C /* UITableViewCellReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5727662182213300AADF3C /* UITableViewCellReusable.swift */; };
+		2CD74EFC2182B6C400AD937B /* AreaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD74EFB2182B6C400AD937B /* AreaModel.swift */; };
 		2CEED6CE2181F81B007B0374 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEED6CD2181F81B007B0374 /* AppDelegate.swift */; };
 		2CEED6D02181F81B007B0374 /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEED6CF2181F81B007B0374 /* TableController.swift */; };
 		2CEED6D32181F81B007B0374 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CEED6D12181F81B007B0374 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		2C5727662182213300AADF3C /* UITableViewCellReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellReusable.swift; sourceTree = "<group>"; };
+		2CD74EFB2182B6C400AD937B /* AreaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaModel.swift; sourceTree = "<group>"; };
 		2CEED6CA2181F81B007B0374 /* layout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = layout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CEED6CD2181F81B007B0374 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CEED6CF2181F81B007B0374 /* TableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
@@ -42,6 +44,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2CD74EFA2182B69000AD937B /* m */ = {
+			isa = PBXGroup;
+			children = (
+				2CD74EFB2182B6C400AD937B /* AreaModel.swift */,
+			);
+			path = m;
+			sourceTree = "<group>";
+		};
 		2CEED6C12181F81B007B0374 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +73,7 @@
 		2CEED6CC2181F81B007B0374 /* layout */ = {
 			isa = PBXGroup;
 			children = (
+				2CD74EFA2182B69000AD937B /* m */,
 				2CEED6E02181FE1F007B0374 /* tables */,
 				2CEED6DF2181FE13007B0374 /* extensions */,
 				2CEED6CD2181F81B007B0374 /* AppDelegate.swift */,
@@ -204,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CD74EFC2182B6C400AD937B /* AreaModel.swift in Sources */,
 				2CEED6D02181F81B007B0374 /* TableController.swift in Sources */,
 				2CEED6CE2181F81B007B0374 /* AppDelegate.swift in Sources */,
 				2C5727672182213300AADF3C /* UITableViewCellReusable.swift in Sources */,
