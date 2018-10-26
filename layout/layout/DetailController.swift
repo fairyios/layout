@@ -26,7 +26,9 @@ class DetailController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         self.title = "详情页面"
+        
         
         // [segue:show.push]时,self.navigationItem.backBarButtonItem=nil,此时也不需要重新赋值(backBarButtonItem = UIBarButtonItem)
         //self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
@@ -41,11 +43,17 @@ class DetailController: UITableViewController {
         
         guard area != nil else { return }
          
-        self.topImage.frame.size.height = self.view.frame.size.width
+        self.topImage.frame.size.height =  self.view.frame.size.width
         self.topImage.image = UIImage(named: (area?.Image)!)
         self.txtAddress.text = self.area?.Address
         self.txtArea.text = self.area?.Area
         self.txtRemark.text = self.area?.Remark
+        
+        UIView.animate(withDuration: 10000, animations: {
+            
+        }) { bool in
+            print("UIView.animate(withDuration: 1000, animations: {")
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -72,3 +80,6 @@ class DetailController: UITableViewController {
 //    }
 }
 
+extension DetailController {
+    
+}
