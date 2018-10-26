@@ -29,6 +29,29 @@ class TableController: UIViewController {
 }
 
 
+// MARK: - 业务逻辑
+extension TableController {
+    
+    /// 删除行
+    ///
+    /// - Parameter indexPath: indexPath description
+    public func FuncDeleteAction(indexPath: IndexPath) {
+        let con = UIAlertController(title: "删除?", message: "是否确定删除？", preferredStyle: .alert)
+        con.addAction(UIAlertAction(title: "取消", style: .cancel, handler: nil))
+        con.addAction(UIAlertAction(title: "删除", style: .destructive, handler: {(ac)->Void in
+            self.areas.remove(at: indexPath.row)
+            self.myTableView.deleteRows(at: [indexPath], with: .automatic)
+            print("删除成功")
+        }))
+        self.present(con, animated: true, completion: {() -> Void in
+            print("以模态方式呈现视图控制器")
+        })
+    }
+    
+    
+    
+    
+}
 
 // MARK: - UITableViewDelegate
 extension TableController : UITableViewDelegate {
@@ -52,16 +75,7 @@ extension TableController : UITableViewDelegate {
     ///   - indexPath: indexPath description
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let con = UIAlertController(title: "删除?", message: "是否确定删除？", preferredStyle: .alert)
-            con.addAction(UIAlertAction(title: "取消", style: .cancel, handler: nil))
-            con.addAction(UIAlertAction(title: "删除", style: .destructive, handler: {(ac)->Void in
-                self.areas.remove(at: indexPath.row)
-                self.myTableView.deleteRows(at: [indexPath], with: .automatic)
-                print("删除成功")
-            }))
-            self.present(con, animated: true, completion: {() -> Void in
-                print("以模态方式呈现视图控制器")
-            })
+            self.FuncDeleteAction(indexPath: indexPath)
         }
         else if editingStyle == .insert {
             
@@ -104,9 +118,64 @@ extension TableController : UITableViewDelegate {
     /// 告知代理表视图即将进入编辑模式。
     /// - Parameters:
     ///   - tableView: tableView description
-    ///   - indexPath: <#indexPath description#>
+    ///   - indexPath: indexPath description
     func tableView(_ tableView: UITableView, willBeginEditingRowAt indexPath: IndexPath) {
         
+    }
+    
+    
+//    /// 要求数据源返回具有给定标题和节标题索引的节的索引。
+//    ///
+//    /// - Parameters:
+//    ///   - tableView: tableView description
+//    ///   - title: title description
+//    ///   - index: index description
+//    /// - Returns: return value description
+//    func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
+//        return 1
+//    }
+    
+    
+    
+    /// Tells the delegate that a specified row is about to be selected.
+    /// 告诉委托者即将选择指定的行
+    /// - Parameters:
+    ///   - tableView: tableView description
+    ///   - indexPath: indexPath description
+    /// - Returns: return value description
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        
+        
+        return indexPath
+    }
+    
+    
+    /// Tells the delegate that a specified row is about to be deselected.
+    /// 告诉委托者即将取消选择指定的行。
+    /// - Parameters:
+    ///   - tableView: tableView description
+    ///   - indexPath: indexPath description
+    /// - Returns: return value description
+    func tableView(_ tableView: UITableView, willDeselectRowAt indexPath: IndexPath) -> IndexPath? {
+        return indexPath
+    }
+    
+    
+    
+    /// 行内右滑：删除+分享
+    ///
+    /// - Parameters:
+    ///   - tableView: tableView description
+    ///   - indexPath: indexPath description
+    /// - Returns: return value description
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let shareAction = UITableViewRowAction(style: .destructive, title: "分享") { (UITableViewRowAction, IndexPath) in
+            
+        }
+        let delteAction = UITableViewRowAction(style: .normal, title: "删除") { (action,index) in
+            self.FuncDeleteAction(indexPath: indexPath)
+        }
+        return [shareAction, delteAction]
     }
 }
 
