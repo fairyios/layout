@@ -51,7 +51,25 @@ extension TableController : UITableViewDelegate {
     ///   - editingStyle: editingStyle description
     ///   - indexPath: indexPath description
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-    
+        if editingStyle == .delete {
+            let con = UIAlertController(title: "删除?", message: "是否确定删除？", preferredStyle: .alert)
+            con.addAction(UIAlertAction(title: "取消", style: .cancel, handler: nil))
+            con.addAction(UIAlertAction(title: "删除", style: .destructive, handler: {(ac)->Void in
+                self.areas.remove(at: indexPath.row)
+                self.myTableView.deleteRows(at: [indexPath], with: .automatic)
+                print("删除成功")
+            }))
+            self.present(con, animated: true, completion: {() -> Void in
+                print("以模态方式呈现视图控制器")
+            })
+        }
+        else if editingStyle == .insert {
+            
+        }
+        else if editingStyle == .none {
+            
+        }
+        
     }
     
 //    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
@@ -68,6 +86,27 @@ extension TableController : UITableViewDelegate {
     ///   - indexPath: indexPath description
     func tableView(_ tableView: UITableView, didEndEditingRowAt indexPath: IndexPath?) {
         print("didEndEditingRowAt")
+    }
+    
+    
+    /// 单个行可以选择不为它们设置-editing属性。 如果未实现，则假定所有行都是可编辑的。
+    /// - Parameters:
+    ///   - tableView: tableView description
+    ///   - indexPath: indexPath description
+    /// - Returns: return value description
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    
+    
+    /// Tells the delegate that the table view is about to go into editing mode.
+    /// 告知代理表视图即将进入编辑模式。
+    /// - Parameters:
+    ///   - tableView: tableView description
+    ///   - indexPath: <#indexPath description#>
+    func tableView(_ tableView: UITableView, willBeginEditingRowAt indexPath: IndexPath) {
+        
     }
 }
 
