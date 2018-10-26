@@ -103,6 +103,7 @@
                                             <outlet property="rightAddress" destination="1ED-6t-jci" id="mKY-EE-6FG"/>
                                             <outlet property="rightArea" destination="klV-69-3tv" id="9Mg-eY-azB"/>
                                             <outlet property="rightRemark" destination="WcS-jf-rVU" id="Gmx-OK-lM7"/>
+                                            <segue destination="dSk-Rc-ZJN" kind="showDetail" identifier="detailSegue" id="g0F-DP-oxi"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

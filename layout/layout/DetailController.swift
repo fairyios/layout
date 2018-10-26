@@ -10,8 +10,14 @@ import UIKit
 
 class DetailController: UITableViewController {
     
+    var  area: AreaModel? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        guard area != nil else { return }
+        
+        
     }
     
     override func didReceiveMemoryWarning() {

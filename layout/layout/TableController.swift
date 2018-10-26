@@ -53,6 +53,24 @@ extension TableController {
     
 }
 
+
+// MARK: - UIStoryboardSegue
+extension TableController {
+    //override func p
+    //DetailController
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // 显示详情页面
+        if segue.identifier == "detailSegue" {
+            
+            let row = (self.myTableView.indexPathForSelectedRow?.row)!
+            let con = segue.destination as! DetailController
+            con.area = self.areas[row]
+        }
+    }
+}
+
 // MARK: - UITableViewDelegate
 extension TableController : UITableViewDelegate {
     
@@ -64,6 +82,7 @@ extension TableController : UITableViewDelegate {
     ///   - indexPath: indexPath description
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("didSelectRowAt=\(indexPath.row)")
+        
     }
     
     
@@ -177,6 +196,7 @@ extension TableController : UITableViewDelegate {
         }
         return [shareAction, delteAction]
     }
+    
 }
 
 
