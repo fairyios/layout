@@ -162,6 +162,9 @@
                                             <real key="value" value="25"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <segue destination="7R0-Hi-uSE" kind="show" id="Gbk-WC-Pdj"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -367,6 +370,81 @@
             </objects>
             <point key="canvasLocation" x="2401" y="103"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Z2f-xj-WYa">
+            <objects>
+                <viewController id="7R0-Hi-uSE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ym0-Lw-g3K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yaodu" translatesAutoresizingMaskIntoConstraints="NO" id="ddJ-g3-acn">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDZ-Kh-zEL">
+                                <rect key="frame" x="310" y="79" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="7Ef-GU-njU"/>
+                                    <constraint firstAttribute="height" constant="50" id="Yo4-Hb-YrX"/>
+                                </constraints>
+                                <color key="tintColor" red="0.84465640779999995" green="0.51457053419999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="emoticons_close"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="0zE-IW-u7C">
+                                <rect key="frame" x="50" y="214" width="275" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmf-3P-cEY">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="6SN-Ba-iTh"/>
+                                            <constraint firstAttribute="width" constant="50" id="aw4-C1-0mJ"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.84465640779999995" green="0.51457053419999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="emoticons_dislike"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdv-Co-4cO">
+                                        <rect key="frame" x="112.5" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="TSd-qo-OUH"/>
+                                            <constraint firstAttribute="height" constant="50" id="dwa-VS-VxW"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.84465640779999995" green="0.51457053419999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="emoticons_good"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UbG-zM-EmM">
+                                        <rect key="frame" x="225" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="Ced-Fw-sBa"/>
+                                            <constraint firstAttribute="height" constant="50" id="mR1-UB-tpw"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.84465640779999995" green="0.51457053419999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="emoticons_great"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="QeC-oe-GRb"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="frA-g7-NQG" firstAttribute="trailing" secondItem="0zE-IW-u7C" secondAttribute="trailing" constant="50" id="5Gn-SP-Q6h"/>
+                            <constraint firstItem="0zE-IW-u7C" firstAttribute="top" secondItem="frA-g7-NQG" secondAttribute="top" constant="150" id="Mmy-hF-Nzl"/>
+                            <constraint firstItem="frA-g7-NQG" firstAttribute="bottom" secondItem="ddJ-g3-acn" secondAttribute="bottom" id="TH8-dR-xCd"/>
+                            <constraint firstItem="ddJ-g3-acn" firstAttribute="leading" secondItem="frA-g7-NQG" secondAttribute="leading" id="Wnw-oZ-814"/>
+                            <constraint firstItem="0zE-IW-u7C" firstAttribute="leading" secondItem="frA-g7-NQG" secondAttribute="leading" constant="50" id="Xpa-A9-rCW"/>
+                            <constraint firstItem="eDZ-Kh-zEL" firstAttribute="top" secondItem="frA-g7-NQG" secondAttribute="top" constant="15" id="a16-gb-bE0"/>
+                            <constraint firstItem="ddJ-g3-acn" firstAttribute="top" secondItem="frA-g7-NQG" secondAttribute="top" id="geF-eF-FKo"/>
+                            <constraint firstItem="frA-g7-NQG" firstAttribute="trailing" secondItem="ddJ-g3-acn" secondAttribute="trailing" id="pEU-du-jIv"/>
+                            <constraint firstItem="frA-g7-NQG" firstAttribute="trailing" secondItem="eDZ-Kh-zEL" secondAttribute="trailing" constant="15" id="wT1-UB-pe4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="frA-g7-NQG"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dbH-SH-lGQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3133.5999999999999" y="102.99850074962519"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="stZ-8h-3Zx">
             <objects>
@@ -394,6 +472,11 @@
     </scenes>
     <resources>
         <image name="baiyun" width="200" height="200"/>
+        <image name="emoticons_close" width="64" height="64"/>
+        <image name="emoticons_dislike" width="64" height="64"/>
+        <image name="emoticons_good" width="128" height="128"/>
+        <image name="emoticons_great" width="128" height="128"/>
         <image name="emoticons_rating" width="128" height="128"/>
+        <image name="yaodu" width="200" height="200"/>
     </resources>
 </document>
