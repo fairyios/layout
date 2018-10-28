@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2C5727672182213300AADF3C /* UITableViewCellReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5727662182213300AADF3C /* UITableViewCellReusable.swift */; };
+		2C709F0A2185ED1700C60597 /* UIViewInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C709F092185ED1700C60597 /* UIViewInspectable.swift */; };
 		2CD74EFC2182B6C400AD937B /* AreaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD74EFB2182B6C400AD937B /* AreaModel.swift */; };
 		2CD74EFE2183083C00AD937B /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD74EFD2183083C00AD937B /* DetailController.swift */; };
 		2CEED6CE2181F81B007B0374 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEED6CD2181F81B007B0374 /* AppDelegate.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		2C5727662182213300AADF3C /* UITableViewCellReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellReusable.swift; sourceTree = "<group>"; };
+		2C709F092185ED1700C60597 /* UIViewInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewInspectable.swift; sourceTree = "<group>"; };
 		2CD74EFB2182B6C400AD937B /* AreaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaModel.swift; sourceTree = "<group>"; };
 		2CD74EFD2183083C00AD937B /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		2CEED6CA2181F81B007B0374 /* layout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = layout.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +94,7 @@
 		2CEED6DF2181FE13007B0374 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
+				2C709F092185ED1700C60597 /* UIViewInspectable.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CD74EFC2182B6C400AD937B /* AreaModel.swift in Sources */,
+				2C709F0A2185ED1700C60597 /* UIViewInspectable.swift in Sources */,
 				2CEED6D02181F81B007B0374 /* TableController.swift in Sources */,
 				2CEED6CE2181F81B007B0374 /* AppDelegate.swift in Sources */,
 				2CD74EFE2183083C00AD937B /* DetailController.swift in Sources */,

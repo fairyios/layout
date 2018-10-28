@@ -20,8 +20,8 @@ class DetailController: UITableViewController {
     @IBOutlet weak var txtArea: UITextField!
     @IBOutlet weak var txtRemark: UITextField!
     @IBOutlet weak var btnSave: UIButton!
+    @IBOutlet weak var topView: UIView!
     
-   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +42,8 @@ class DetailController: UITableViewController {
         self.navigationItem.rightBarButtonItem?.tintColor = UIColor.white
         
         guard area != nil else { return }
-         
+        
+        self.topView.frame.size.height = self.view.frame.size.width
         self.topImage.frame.size.height =  self.view.frame.size.width
         self.topImage.image = UIImage(named: (area?.Image)!)
         self.txtAddress.text = self.area?.Address
