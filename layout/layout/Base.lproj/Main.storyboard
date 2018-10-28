@@ -145,7 +145,7 @@
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wwu-rv-b96" userLabel="图片">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                 </imageView>
-                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeT-8e-Lcq" userLabel="评论">
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeT-8e-Lcq" userLabel="评论">
                                     <rect key="frame" x="310" y="15" width="50" height="50"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
@@ -153,9 +153,7 @@
                                         <constraint firstAttribute="height" constant="50" id="ix5-jK-yWn"/>
                                     </constraints>
                                     <color key="tintColor" red="0.94546109440000003" green="0.64258676770000001" blue="0.98290890460000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <state key="normal" image="emoticons_rating">
-                                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
+                                    <state key="normal" image="emoticons_rating"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                             <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -330,7 +328,7 @@
                                             <subviews>
                                                 <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfZ-vG-r27">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
-                                                    <color key="backgroundColor" red="0.94546109440000003" green="0.64258676770000001" blue="0.98290890460000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.84465640779999995" green="0.51457053419999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" title="保存">
                                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
