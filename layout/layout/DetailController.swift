@@ -21,7 +21,7 @@ class DetailController: UITableViewController {
     @IBOutlet weak var txtRemark: UITextField!
     @IBOutlet weak var btnSave: UIButton!
     @IBOutlet weak var topView: UIView!
-    
+    @IBOutlet weak var btnRating: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,11 +90,18 @@ extension DetailController {
             con.area = self.area
         }
     }
-}
-
-extension DetailController {
     
+    
+    
+    /// 评论后返回
+    ///
+    /// - Parameter segue: segue description
     @IBAction func closeRating(segue: UIStoryboardSegue) {
         
+        if(segue.identifier == "backDetailUnwind") {
+            let con = segue.source as! RatingController
+            self.btnRating.setImage(UIImage(named: con.rating), for: .normal)
+        }
     }
 }
+

@@ -13,6 +13,7 @@ import UIKit
 class RatingController: UIViewController {
     
     var area: AreaModel!
+    var rating: String! = ""
     
     @IBOutlet weak var btnClose: UIButton!
     @IBOutlet weak var backgroundImage: UIImageView! //背景图片
@@ -38,6 +39,32 @@ class RatingController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    
+    
+    /// 差评 - 转场返回
+    ///
+    /// - Parameter sender: sender description
+    @IBAction func badRatingAction(_ sender: Any) {
+        self.rating = "emoticons_dislike"
+        performSegue(withIdentifier: "backDetailUnwind", sender: self)
+    }
+    
+    
+    /// 好评 - 转场返回
+    ///
+    /// - Parameter sender: sender description
+    @IBAction func goodRatingAction(_ sender: Any) {
+        self.rating = "emoticons_good"
+        performSegue(withIdentifier: "backDetailUnwind", sender: self)
+    }
+    
+    /// 超好评 - 转场返回
+    ///
+    /// - Parameter sender: sender description
+    @IBAction func greatRatingAction(_ sender: Any) {
+        self.rating = "emoticons_great"
+        performSegue(withIdentifier: "backDetailUnwind", sender: self)
+    }
 }
 
 extension RatingController {
@@ -47,6 +74,6 @@ extension RatingController {
     }
     
 //    @IBAction func closeRatingFrom(segue: UIStoryboardSegue) {
-//        
+//
 //    }
 }

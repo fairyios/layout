@@ -361,6 +361,7 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="btnRating" destination="zeT-8e-Lcq" id="9DX-1W-w4S"/>
                         <outlet property="btnSave" destination="qfZ-vG-r27" id="ej2-yW-49J"/>
                         <outlet property="topImage" destination="Wwu-rv-b96" id="Iap-ha-wpC"/>
                         <outlet property="topView" destination="Bep-dZ-4qO" id="Q77-qT-clC"/>
@@ -400,7 +401,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="closeAction:" destination="7R0-Hi-uSE" eventType="touchUpInside" id="suQ-AU-2ft"/>
-                                    <segue destination="5bO-Zb-GAZ" kind="unwind" unwindAction="closeRatingWithSegue:" id="f7v-wf-dWZ"/>
+                                    <segue destination="5bO-Zb-GAZ" kind="unwind" identifier="backDetailUnwind" unwindAction="closeRatingWithSegue:" id="f7v-wf-dWZ"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="0zE-IW-u7C">
@@ -420,6 +421,9 @@
                                                 <real key="value" value="25"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="badRatingAction:" destination="7R0-Hi-uSE" eventType="touchUpInside" id="pgp-q6-TGp"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdv-Co-4cO">
                                         <rect key="frame" x="112.5" y="0.0" width="50" height="50"/>
@@ -435,6 +439,9 @@
                                                 <real key="value" value="25"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="goodRatingAction:" destination="7R0-Hi-uSE" eventType="touchUpInside" id="t3c-pC-Boh"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UbG-zM-EmM">
                                         <rect key="frame" x="225" y="0.0" width="50" height="50"/>
@@ -450,6 +457,9 @@
                                                 <real key="value" value="25"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="greatRatingAction:" destination="7R0-Hi-uSE" eventType="touchUpInside" id="MqG-LY-DoG"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
