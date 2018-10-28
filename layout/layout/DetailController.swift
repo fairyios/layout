@@ -81,6 +81,13 @@ class DetailController: UITableViewController {
 //    }
 }
 
+// MARK: - UIStoryboardSegue
 extension DetailController {
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ratingSegue" {
+            let con = segue.destination as! RatingController
+            con.area = self.area
+        }
+    }
 }

@@ -85,11 +85,11 @@
 				2CEED6CD2181F81B007B0374 /* AppDelegate.swift */,
 				2CEED6CF2181F81B007B0374 /* TableController.swift */,
 				2CD74EFD2183083C00AD937B /* DetailController.swift */,
+				2C709F0B2185FB0700C60597 /* RatingController.swift */,
 				2CEED6D12181F81B007B0374 /* Main.storyboard */,
 				2CEED6D42181F81B007B0374 /* Assets.xcassets */,
 				2CEED6D62181F81B007B0374 /* LaunchScreen.storyboard */,
 				2CEED6D92181F81B007B0374 /* Info.plist */,
-				2C709F0B2185FB0700C60597 /* RatingController.swift */,
 			);
 			path = layout;
 			sourceTree = "<group>";

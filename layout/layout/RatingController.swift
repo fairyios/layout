@@ -12,14 +12,27 @@ import UIKit
 /// 评论
 class RatingController: UIViewController {
     
+    var area: AreaModel!
     
-    /// <#Description#>
+    @IBOutlet weak var backgroundImage: UIImageView! //背景图片
+    
+    
+    /// Description
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.backgroundImage.image = UIImage(named: area.Image)
+        
+        let blurEffect = UIVisualEffectView(frame: self.view.frame)
+        blurEffect.effect = UIBlurEffect(style: .regular)
+        //blurEffect.addConstraints(self.backgroundImage.constraints) //constraints
+        
+        self.backgroundImage.addSubview(blurEffect)
+        //self.backgroundImage.bringSubviewToFront(blurEffect)
     }
     
     
-    /// <#Description#>
+    /// Description
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

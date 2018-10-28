@@ -166,7 +166,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
-                                        <segue destination="7R0-Hi-uSE" kind="show" id="Gbk-WC-Pdj"/>
+                                        <segue destination="7R0-Hi-uSE" kind="show" identifier="ratingSegue" id="Gbk-WC-Pdj"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -381,7 +381,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yaodu" translatesAutoresizingMaskIntoConstraints="NO" id="ddJ-g3-acn">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yaodu" translatesAutoresizingMaskIntoConstraints="NO" id="ddJ-g3-acn" userLabel="背景图片">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDZ-Kh-zEL">
@@ -467,6 +467,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="frA-g7-NQG"/>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImage" destination="ddJ-g3-acn" id="haz-qh-Yb4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbH-SH-lGQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
