@@ -45,4 +45,8 @@ extension RatingController {
     @IBAction func closeAction(_ sender: Any) {
         print("closeAction")
     }
+    
+//    @IBAction func closeRatingFrom(segue: UIStoryboardSegue) {
+//        
+//    }
 }

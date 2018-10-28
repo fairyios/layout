@@ -400,6 +400,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="closeAction:" destination="7R0-Hi-uSE" eventType="touchUpInside" id="suQ-AU-2ft"/>
+                                    <segue destination="5bO-Zb-GAZ" kind="unwind" unwindAction="closeRatingWithSegue:" id="f7v-wf-dWZ"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="0zE-IW-u7C">
@@ -476,6 +477,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbH-SH-lGQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="5bO-Zb-GAZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3133.5999999999999" y="102.99850074962519"/>
         </scene>

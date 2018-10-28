@@ -91,3 +91,10 @@ extension DetailController {
         }
     }
 }
+
+extension DetailController {
+    
+    @IBAction func closeRating(segue: UIStoryboardSegue) {
+        
+    }
+}
