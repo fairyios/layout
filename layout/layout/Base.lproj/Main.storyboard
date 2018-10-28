@@ -398,6 +398,9 @@
                                         <real key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="closeAction:" destination="7R0-Hi-uSE" eventType="touchUpInside" id="suQ-AU-2ft"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="0zE-IW-u7C">
                                 <rect key="frame" x="50" y="214" width="275" height="50"/>
@@ -469,6 +472,7 @@
                     </view>
                     <connections>
                         <outlet property="backgroundImage" destination="ddJ-g3-acn" id="haz-qh-Yb4"/>
+                        <outlet property="btnClose" destination="eDZ-Kh-zEL" id="AXf-QT-6d7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbH-SH-lGQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
