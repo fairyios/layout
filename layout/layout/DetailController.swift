@@ -136,6 +136,15 @@ extension DetailController: UIImagePickerControllerDelegate,
         self.topImage.contentMode = .scaleToFill
         self.topImage.clipsToBounds = true
         
+        
+        //添加图片约束
+        let topImageWidhtConstraint = NSLayoutConstraint(item: self.topImage, attribute: .width, relatedBy: .equal, toItem: self.topView
+            , attribute: .width, multiplier: 1, constant: 0)
+        let topImageHeightConstraint = NSLayoutConstraint(item: self.topImage, attribute: .height, relatedBy: .equal, toItem: self.topView
+            , attribute: .height, multiplier: 1, constant: 0)
+        topImageWidhtConstraint.isActive = true
+        topImageHeightConstraint.isActive = true
+        
         //视图自己退场
         //dismiss(animated: true, completion: nil)
         picker.dismiss(animated: true, completion: nil)
