@@ -8,6 +8,10 @@
 
 import UIKit
 import MobileCoreServices
+import Photos
+import AssetsLibrary
+import MobileCoreServices
+
 
 
 /// MARK - 详情页面
@@ -100,57 +104,110 @@ extension DetailController {
 
 
 // MARK: - UIImagePickerControllerDelegate 相机相册
+/// 模拟器没有摄像头不能拍照，要在真机中测试
 extension DetailController: UIImagePickerControllerDelegate,
     UINavigationControllerDelegate {
     
+    
+    /// 退出相册
+    ///
+    /// - Parameter picker: picker description
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    /// 选择一张图片
+    ///
+    /// - Parameters:
+    ///   - picker: picker description
+    ///   - info: info description
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info:
         [UIImagePickerController.InfoKey : Any]) {
-        print(imagePickerController)
+        
+        print("imagePickerController")
+        
+        let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        if image == nil {
+             print("选择图片失败")
+            return
+        }
+        self.topImage.image = image
+        self.topImage.contentMode = .scaleToFill
+        self.topImage.clipsToBounds = true
+        
+        //视图自己退场
+        //dismiss(animated: true, completion: nil)
+        picker.dismiss(animated: true, completion: nil)
+        
     }
     
     
     
     /// 上传图片
     /// [import MobileCoreServices]
+    /// [import Photos]
     /// [UIImagePickerControllerDelegate]
-    /// [UINavigationControllerDelegate]
+    /// [UINavigationControllerDelegate 相册中o有导航，必须实现这个代理]
     /// [func imagePickerController]
     /// - Parameter sender: sender description
     @IBAction func uploadAcion(_ sender: Any) {
         
-        //指示设备是否支持使用指定的源类型选择媒体。
-        guard UIImagePickerController.isSourceTypeAvailable(.photoLibrary) else {
-            print("没有权限访问相机")
-            return
+        let sourceType = UIImagePickerController.SourceType.photoLibrary
+        if sourceType == .camera {
+            
+            if Platform.isSimulator {
+                print("模拟器不支持拍照功能")
+                return
+            }
+            guard UIImagePickerController.isCameraDeviceAvailable(.front) else {
+                print("前端相机不可用")
+                return
+            }
+            guard UIImagePickerController.isCameraDeviceAvailable(.rear) else {
+                print("后相机不可用")
+                return
+            }
         }
-        // 获得相机模式下支持的媒体类型
-        let availableMediaTypes: [String]? = UIImagePickerController.availableMediaTypes(for: .photoLibrary)
-        if availableMediaTypes == nil {
-            return
+        else if sourceType == .photoLibrary {
+            //指示设备是否支持使用指定的源类型选择媒体。
+            guard UIImagePickerController.isSourceTypeAvailable(sourceType) else {
+                print("没有权限访问相机")
+                return
+            }
         }
         
+        // 获得相机模式下支持的媒体类型
+        let availableMediaTypes: [String]? = UIImagePickerController.availableMediaTypes(for: sourceType)
+        if availableMediaTypes == nil {
+            print("if availableMediaTypes = nil")
+            return
+        } else {
+            print(availableMediaTypes!)
+        }
+        print(kUTTypeImage as String)
         
         //let picker = UIImagePickerController(navigationBarClass: nil, toolbarClass: nil)
         let picker = UIImagePickerController(rootViewController: self)
         //picker.mediaTypes = [kUTTypeQuickTimeImage as String] //一个数组，指示媒体选择器控制器要访问的媒体类型
-        picker.mediaTypes = (availableMediaTypes)!
+        //picker.mediaTypes = (availableMediaTypes)! //["public.image", "public.movie"]
+        picker.mediaTypes = [kUTTypeImage as String]
         picker.delegate = self // 这句代码需要继承 UINavigationControllerDelegate
         picker.allowsEditing = false // replacement for -allowsImageEditing; default value is NO.
-        picker.sourceType  = .photoLibrary
+        picker.sourceType  = sourceType
+        picker.modalPresentationStyle = UIModalPresentationStyle.fullScreen
         
         //self.view.addSubview(picker.view)
         //self.show(picker, sender: nil)
         
         //self.view.addSubview(picker.view)
         //self.view.bringSubviewToFront(picker.view)
-        self.present(picker, animated: true, completion: nil)
+        self.present(picker, animated: true, completion: { () -> Void in
+            print("self.present(picker, animated: true, completion")
+        })
         
         
-        guard UIImagePickerController.isCameraDeviceAvailable(.front) else {
-            print("前端相机不可用")
-            return
-        }
+        
     }
 }
 

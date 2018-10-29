@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C1C9D2121875BF2009F1C03 /* IosHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1C9D2021875BF1009F1C03 /* IosHelper.swift */; };
 		2C5727672182213300AADF3C /* UITableViewCellReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5727662182213300AADF3C /* UITableViewCellReusable.swift */; };
 		2C709F0A2185ED1700C60597 /* UIViewInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C709F092185ED1700C60597 /* UIViewInspectable.swift */; };
 		2C709F0C2185FB0700C60597 /* RatingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C709F0B2185FB0700C60597 /* RatingController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C1C9D2021875BF1009F1C03 /* IosHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IosHelper.swift; sourceTree = "<group>"; };
 		2C5727662182213300AADF3C /* UITableViewCellReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellReusable.swift; sourceTree = "<group>"; };
 		2C709F092185ED1700C60597 /* UIViewInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewInspectable.swift; sourceTree = "<group>"; };
 		2C709F0B2185FB0700C60597 /* RatingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingController.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				2C709F092185ED1700C60597 /* UIViewInspectable.swift */,
+				2C1C9D2021875BF1009F1C03 /* IosHelper.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				2CEED6D02181F81B007B0374 /* TableController.swift in Sources */,
 				2CEED6CE2181F81B007B0374 /* AppDelegate.swift in Sources */,
 				2CD74EFE2183083C00AD937B /* DetailController.swift in Sources */,
+				2C1C9D2121875BF2009F1C03 /* IosHelper.swift in Sources */,
 				2C709F0C2185FB0700C60597 /* RatingController.swift in Sources */,
 				2C5727672182213300AADF3C /* UITableViewCellReusable.swift in Sources */,
 			);

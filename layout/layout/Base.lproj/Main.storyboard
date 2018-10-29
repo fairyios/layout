@@ -171,12 +171,12 @@
                                         <segue destination="7R0-Hi-uSE" kind="show" identifier="ratingSegue" id="Gbk-WC-Pdj"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7p-g8-bjQ">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7p-g8-bjQ" userLabel="上传图片">
                                     <rect key="frame" x="310" y="160" width="50" height="25"/>
                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="25" id="4hn-B2-3wp"/>
-                                        <constraint firstAttribute="width" constant="50" id="LbX-cT-N6F"/>
+                                        <constraint firstAttribute="width" constant="50" id="Qz5-Bv-qSm"/>
                                     </constraints>
                                     <state key="normal" title="上传"/>
                                     <connections>
@@ -189,7 +189,7 @@
                                 <constraint firstItem="zeT-8e-Lcq" firstAttribute="top" secondItem="Bep-dZ-4qO" secondAttribute="top" constant="15" id="2aM-BI-1PJ"/>
                                 <constraint firstItem="Wwu-rv-b96" firstAttribute="leading" secondItem="Bep-dZ-4qO" secondAttribute="leading" id="7cs-df-U9J"/>
                                 <constraint firstItem="Wwu-rv-b96" firstAttribute="bottom" secondItem="Bep-dZ-4qO" secondAttribute="bottom" id="Cqg-gh-7X3"/>
-                                <constraint firstAttribute="trailing" secondItem="Q7p-g8-bjQ" secondAttribute="trailing" constant="15" id="EXh-2G-utV"/>
+                                <constraint firstItem="Q7p-g8-bjQ" firstAttribute="trailing" secondItem="Bep-dZ-4qO" secondAttribute="trailing" constant="-15" id="EXh-2G-utV"/>
                                 <constraint firstItem="Wwu-rv-b96" firstAttribute="trailing" secondItem="Bep-dZ-4qO" secondAttribute="trailing" id="Etc-0b-PRt"/>
                                 <constraint firstItem="zeT-8e-Lcq" firstAttribute="trailing" secondItem="Bep-dZ-4qO" secondAttribute="trailing" constant="-15" id="K9a-IP-Iih"/>
                                 <constraint firstItem="Q7p-g8-bjQ" firstAttribute="bottom" secondItem="Bep-dZ-4qO" secondAttribute="bottom" constant="-15" id="aqI-uO-GN9"/>
