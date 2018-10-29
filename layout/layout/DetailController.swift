@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MobileCoreServices
 
 
 /// MARK - 详情页面
@@ -22,6 +23,8 @@ class DetailController: UITableViewController {
     @IBOutlet weak var btnSave: UIButton!
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var btnRating: UIButton!
+    @IBOutlet weak var btnUpload: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,23 +67,7 @@ class DetailController: UITableViewController {
     }
     
     
-    /// 保存
-    ///
-    /// - Parameter sender: sender description
-    @IBAction func actionAction(_ sender: Any) {
-        area?.Address = txtAddress.text
-        area?.Area = txtArea.text
-        area?.Remark = txtRemark.text
-    }
     
-//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return 1
-//    }
-//
-//    
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//
-//    }
 }
 
 // MARK: - UIStoryboardSegue
@@ -108,6 +95,76 @@ extension DetailController {
             }
             
         }
+    }
+}
+
+
+// MARK: - UIImagePickerControllerDelegate 相机相册
+extension DetailController: UIImagePickerControllerDelegate,
+    UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info:
+        [UIImagePickerController.InfoKey : Any]) {
+        print(imagePickerController)
+    }
+    
+    
+    
+    /// 上传图片
+    /// [import MobileCoreServices]
+    /// [UIImagePickerControllerDelegate]
+    /// [UINavigationControllerDelegate]
+    /// [func imagePickerController]
+    /// - Parameter sender: sender description
+    @IBAction func uploadAcion(_ sender: Any) {
+        
+        //指示设备是否支持使用指定的源类型选择媒体。
+        guard UIImagePickerController.isSourceTypeAvailable(.photoLibrary) else {
+            print("没有权限访问相机")
+            return
+        }
+        // 获得相机模式下支持的媒体类型
+        let availableMediaTypes: [String]? = UIImagePickerController.availableMediaTypes(for: .photoLibrary)
+        if availableMediaTypes == nil {
+            return
+        }
+        
+        
+        //let picker = UIImagePickerController(navigationBarClass: nil, toolbarClass: nil)
+        let picker = UIImagePickerController(rootViewController: self)
+        //picker.mediaTypes = [kUTTypeQuickTimeImage as String] //一个数组，指示媒体选择器控制器要访问的媒体类型
+        picker.mediaTypes = (availableMediaTypes)!
+        picker.delegate = self // 这句代码需要继承 UINavigationControllerDelegate
+        picker.allowsEditing = false // replacement for -allowsImageEditing; default value is NO.
+        picker.sourceType  = .photoLibrary
+        
+        //self.view.addSubview(picker.view)
+        //self.show(picker, sender: nil)
+        
+        //self.view.addSubview(picker.view)
+        //self.view.bringSubviewToFront(picker.view)
+        self.present(picker, animated: true, completion: nil)
+        
+        
+        guard UIImagePickerController.isCameraDeviceAvailable(.front) else {
+            print("前端相机不可用")
+            return
+        }
+    }
+}
+
+// MARK: - 保存
+extension DetailController {
+    
+    
+    /// 保存
+    ///
+    /// - Parameter sender: sender description
+    @IBAction func actionAction(_ sender: Any) {
+        area?.Address = txtAddress.text
+        area?.Area = txtArea.text
+        area?.Remark = txtRemark.text
     }
 }
 

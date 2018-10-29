@@ -29,7 +29,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CSy-p5-tSd" userLabel="外边框">
-                                                    <rect key="frame" x="10" y="10" width="647" height="59.5"/>
+                                                    <rect key="frame" x="10" y="10" width="355" height="59.5"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baiyun" highlightedImage="baiyun" translatesAutoresizingMaskIntoConstraints="NO" id="Xpa-Uh-xRg">
                                                             <rect key="frame" x="0.0" y="0.0" width="59.5" height="59.5"/>
@@ -39,22 +39,22 @@
                                                             </constraints>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fWg-kn-2GU">
-                                                            <rect key="frame" x="69.5" y="0.0" width="577.5" height="59.5"/>
+                                                            <rect key="frame" x="69.5" y="0.0" width="285.5" height="59.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="地址地址地址地址地址地址地址地址地址地址地址" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ED-6t-jci">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="577.5" height="20.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="285.5" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="区域" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klV-69-3tv">
-                                                                    <rect key="frame" x="0.0" y="20.5" width="577.5" height="20.5"/>
+                                                                    <rect key="frame" x="0.0" y="20.5" width="285.5" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="备注" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WcS-jf-rVU">
-                                                                    <rect key="frame" x="0.0" y="41" width="577.5" height="18.5"/>
+                                                                    <rect key="frame" x="0.0" y="41" width="285.5" height="18.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -119,7 +119,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="列表页面" id="NZG-Vk-GIO"/>
+                    <navigationItem key="navigationItem" title="列表页面" id="NZG-Vk-GIO">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="E2U-zg-eSo" userLabel="新增"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="myTableView" destination="K1B-Mj-GWZ" id="m1D-Bq-RVQ"/>
                     </connections>
@@ -169,14 +171,28 @@
                                         <segue destination="7R0-Hi-uSE" kind="show" identifier="ratingSegue" id="Gbk-WC-Pdj"/>
                                     </connections>
                                 </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7p-g8-bjQ">
+                                    <rect key="frame" x="310" y="160" width="50" height="25"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="25" id="4hn-B2-3wp"/>
+                                        <constraint firstAttribute="width" constant="50" id="LbX-cT-N6F"/>
+                                    </constraints>
+                                    <state key="normal" title="上传"/>
+                                    <connections>
+                                        <action selector="uploadAcion:" destination="dSk-Rc-ZJN" eventType="touchUpInside" id="GQ8-Rs-4AZ"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="zeT-8e-Lcq" firstAttribute="top" secondItem="Bep-dZ-4qO" secondAttribute="top" constant="15" id="2aM-BI-1PJ"/>
                                 <constraint firstItem="Wwu-rv-b96" firstAttribute="leading" secondItem="Bep-dZ-4qO" secondAttribute="leading" id="7cs-df-U9J"/>
                                 <constraint firstItem="Wwu-rv-b96" firstAttribute="bottom" secondItem="Bep-dZ-4qO" secondAttribute="bottom" id="Cqg-gh-7X3"/>
+                                <constraint firstAttribute="trailing" secondItem="Q7p-g8-bjQ" secondAttribute="trailing" constant="15" id="EXh-2G-utV"/>
                                 <constraint firstItem="Wwu-rv-b96" firstAttribute="trailing" secondItem="Bep-dZ-4qO" secondAttribute="trailing" id="Etc-0b-PRt"/>
                                 <constraint firstItem="zeT-8e-Lcq" firstAttribute="trailing" secondItem="Bep-dZ-4qO" secondAttribute="trailing" constant="-15" id="K9a-IP-Iih"/>
+                                <constraint firstItem="Q7p-g8-bjQ" firstAttribute="bottom" secondItem="Bep-dZ-4qO" secondAttribute="bottom" constant="-15" id="aqI-uO-GN9"/>
                                 <constraint firstItem="Wwu-rv-b96" firstAttribute="top" secondItem="Bep-dZ-4qO" secondAttribute="top" id="ecW-df-9tY"/>
                             </constraints>
                         </view>
@@ -363,6 +379,7 @@
                     <connections>
                         <outlet property="btnRating" destination="zeT-8e-Lcq" id="9DX-1W-w4S"/>
                         <outlet property="btnSave" destination="qfZ-vG-r27" id="ej2-yW-49J"/>
+                        <outlet property="btnUpload" destination="Q7p-g8-bjQ" id="afD-eL-3WM"/>
                         <outlet property="topImage" destination="Wwu-rv-b96" id="Iap-ha-wpC"/>
                         <outlet property="topView" destination="Bep-dZ-4qO" id="Q77-qT-clC"/>
                         <outlet property="txtAddress" destination="ehT-ZE-dTu" id="0za-14-r7V"/>
