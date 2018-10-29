@@ -13,7 +13,7 @@ import UIKit
 class RatingController: UIViewController {
     
     var area: AreaModel!
-    var rating: String! = ""
+    var rating: String? = nil
     
     @IBOutlet weak var btnClose: UIButton!
     @IBOutlet weak var backgroundImage: UIImageView! //背景图片

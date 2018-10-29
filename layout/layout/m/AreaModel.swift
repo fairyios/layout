@@ -50,7 +50,7 @@ extension AreaModel {
     /// - Returns: return value description
     public static func getDemos() -> [AreaModel] {
         
-        let m01 = AreaModel(image: "xinzhuang", address: "娟娟娟娟娟娟娟娟娟娟娟娟娟娟娟娟娟娟娟娟", area: "很漂亮", remark: "爱哭")
+        let m01 = AreaModel(image: "xinzhuang", address: "它的作用是方便创建对象时使用，但它必须直接或间接调用专门初始化器", area: "很漂亮", remark: "爱哭")
         let m02 = AreaModel(image: "qilihe", address: "2地址sdf", area: "2区域", remark: "2备注")
         let m03 = AreaModel(image: "youxi", address: "3地址gsd", area: "3区域", remark: "3备注")
         let m04 = AreaModel(image: "chengxi", address: "4地址的方式", area: "4区域", remark: "4备注")

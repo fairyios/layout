@@ -43,20 +43,22 @@ class DetailController: UITableViewController {
         
         guard area != nil else { return }
         
-        self.topView.frame.size.height = self.view.frame.size.width
-        self.topImage.frame.size.height =  self.view.frame.size.width
-        self.topImage.image = UIImage(named: (area?.Image)!)
-        self.txtAddress.text = self.area?.Address
-        self.txtArea.text = self.area?.Area
-        self.txtRemark.text = self.area?.Remark
         
-        UIView.animate(withDuration: 10000, animations: {
-            
+        
+        //withDuration:
+        //  动画的总持续时间，以秒为单位。如果指定负值或0，则在不对其进行动画处理的情况下进行更改
+        UIView.animate(withDuration: 1, animations: {
+            self.topView.frame.size.height = self.view.frame.size.width
+            self.topImage.frame.size.height =  self.view.frame.size.width
+            self.topImage.image = UIImage(named: (self.area?.Image)!)
+            self.txtAddress.text = self.area?.Address
+            self.txtArea.text = self.area?.Area
+            self.txtRemark.text = self.area?.Remark
+            self.btnRating.backgroundColor = UIColor.yellow
         }) { bool in
-            print("UIView.animate(withDuration: 1000, animations: {")
+            print("动画之行完毕")
         }
     }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -100,7 +102,11 @@ extension DetailController {
         
         if(segue.identifier == "backDetailUnwind") {
             let con = segue.source as! RatingController
-            self.btnRating.setImage(UIImage(named: con.rating), for: .normal)
+            
+            if let r = con.rating {
+                self.btnRating.setImage(UIImage(named: r), for: .normal)
+            }
+            
         }
     }
 }
