@@ -130,10 +130,10 @@
             </objects>
             <point key="canvasLocation" x="1556" y="102.99850074962519"/>
         </scene>
-        <!--Detail Controller-->
+        <!--详情页面-->
         <scene sceneID="iu7-hP-m83">
             <objects>
-                <tableViewController id="dSk-Rc-ZJN" customClass="DetailController" customModule="layout" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="dSk-Rc-ZJN" userLabel="详情页面" customClass="DetailController" customModule="layout" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="U9i-Bf-36i">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -176,7 +176,7 @@
                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="25" id="4hn-B2-3wp"/>
-                                        <constraint firstAttribute="width" constant="50" id="Qz5-Bv-qSm"/>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="Qz5-Bv-qSm"/>
                                     </constraints>
                                     <state key="normal" title="上传"/>
                                     <connections>
@@ -193,6 +193,7 @@
                                 <constraint firstItem="Wwu-rv-b96" firstAttribute="trailing" secondItem="Bep-dZ-4qO" secondAttribute="trailing" id="Etc-0b-PRt"/>
                                 <constraint firstItem="zeT-8e-Lcq" firstAttribute="trailing" secondItem="Bep-dZ-4qO" secondAttribute="trailing" constant="-15" id="K9a-IP-Iih"/>
                                 <constraint firstItem="Q7p-g8-bjQ" firstAttribute="bottom" secondItem="Bep-dZ-4qO" secondAttribute="bottom" constant="-15" id="aqI-uO-GN9"/>
+                                <constraint firstItem="Q7p-g8-bjQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Bep-dZ-4qO" secondAttribute="leading" constant="20" symbolic="YES" id="cHS-JZ-tHo"/>
                                 <constraint firstItem="Wwu-rv-b96" firstAttribute="top" secondItem="Bep-dZ-4qO" secondAttribute="top" id="ecW-df-9tY"/>
                             </constraints>
                         </view>
@@ -391,10 +392,10 @@
             </objects>
             <point key="canvasLocation" x="2401" y="103"/>
         </scene>
-        <!--Rating Controller-->
+        <!--评论页面-->
         <scene sceneID="Z2f-xj-WYa">
             <objects>
-                <viewController id="7R0-Hi-uSE" customClass="RatingController" customModule="layout" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7R0-Hi-uSE" userLabel="评论页面" customClass="RatingController" customModule="layout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ym0-Lw-g3K">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -508,10 +509,10 @@
             </objects>
             <point key="canvasLocation" x="3133.5999999999999" y="102.99850074962519"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--导航栏-->
         <scene sceneID="stZ-8h-3Zx">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cQF-JD-JJn" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cQF-JD-JJn" userLabel="导航栏" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="LNo-XV-Qbm">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
