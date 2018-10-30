@@ -7,15 +7,15 @@
 //
 
 import UIKit
-import MobileCoreServices
-import Photos
-import AssetsLibrary
+//import MobileCoreServices
+//import Photos
+//import AssetsLibrary
 import MobileCoreServices
 
 
 
 /// MARK - 详情页面
-class DetailController: UITableViewController {
+final class DetailController: UITableViewController {
     
     var  area: AreaModel? = nil
     
@@ -197,10 +197,10 @@ extension DetailController: UIImagePickerControllerDelegate,
         print(kUTTypeImage as String)
         
         //let picker = UIImagePickerController(navigationBarClass: nil, toolbarClass: nil)
-        let picker = UIImagePickerController(rootViewController: self)
+        let picker = UIImagePickerController()
         //picker.mediaTypes = [kUTTypeQuickTimeImage as String] //一个数组，指示媒体选择器控制器要访问的媒体类型
         //picker.mediaTypes = (availableMediaTypes)! //["public.image", "public.movie"]
-        picker.mediaTypes = [kUTTypeImage as String]
+        //picker.mediaTypes = [kUTTypeImage as String]
         picker.delegate = self // 这句代码需要继承 UINavigationControllerDelegate
         picker.allowsEditing = false // replacement for -allowsImageEditing; default value is NO.
         picker.sourceType  = sourceType

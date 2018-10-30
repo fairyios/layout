@@ -9,9 +9,11 @@
 import UIKit
 
 class TableController: UIViewController {
+    
+    
 
     var areas: [AreaModel] = AreaModel.getDemos()
-    
+    var searchController: UISearchController!
     
     @IBOutlet weak var myTableView: UITableView!
     
@@ -19,13 +21,58 @@ class TableController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view, typically from a nib.
+        self.initUISearchController()
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
+}
+
+
+// MARK: - 搜索栏 UISearchControllerDelegate, UISearchResultsUpdating
+extension TableController: UISearchControllerDelegate, UISearchResultsUpdating {
+    
+    func initUISearchController() {
+        
+        print("initUISearchController")
+        
+        //        let ui = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
+        //        ui.backgroundColor = UIColor.yellow
+        //        self.myTableView.tableHeaderView = ui
+        
+        //self.searchController = UISearchController()
+        self.searchController = UISearchController(searchResultsController: nil)
+        self.searchController.delegate = self
+        self.searchController.searchResultsUpdater = self
+        self.searchController.hidesNavigationBarDuringPresentation = false
+        self.searchController.searchBar.barStyle = .black
+        self.searchController.searchBar.placeholder = "请输入关键字"
+        //self.searchController.searchBar.frame = CGRect(x: 0, y: 0, width: 100, height: 30)
+        self.searchController.searchBar.sizeToFit()
+        
+        self.searchController.view.backgroundColor = UIColor.clear
+        //self.searchController.view.frame = (self.myTableView.tableHeaderView?.frame)!
+        self.myTableView.tableHeaderView = self.searchController.searchBar
+    }
+    
+    
+    /// Called when the search bar's text or scope has changed or when the search bar becomes first responder.
+    /// 当搜索栏的文本或范围发生变化或搜索栏成为第一响应者时调用
+    /// - Parameter searchController: searchController description
+    func updateSearchResults(for searchController: UISearchController) {
+        debugPrint(searchController.searchBar.text!)
+        
+        guard searchController.searchBar.text == nil else { return }
+        let keyword = (searchController.searchBar.text!).trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        //self.areas = self.areas.filter { $0.Address.contains(keyword!) }
+        self.areas = self.areas.filter { $0.Address.localizedStandardContains(keyword) }
+        self.myTableView.reloadData()
+    }
+    
 }
 
 

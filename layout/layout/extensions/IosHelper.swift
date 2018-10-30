@@ -20,3 +20,6 @@ struct Platform {
     }()
 }
 
+extension Array {
+     
+}
