@@ -37,7 +37,7 @@ extension TableController: UISearchControllerDelegate, UISearchResultsUpdating {
     
     func initUISearchController() {
         
-        print("initUISearchController")
+        let baseColor = self.navigationController?.navigationBar.barTintColor
         
         //        let ui = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
         //        ui.backgroundColor = UIColor.yellow
@@ -45,10 +45,18 @@ extension TableController: UISearchControllerDelegate, UISearchResultsUpdating {
         
         //self.searchController = UISearchController()
         self.searchController = UISearchController(searchResultsController: nil)
+        //dimsBackgroundDuringPresentation 此属性仅控制原始视图控制器是否最初被遮挡
+        self.searchController.dimsBackgroundDuringPresentation = true
+        self.searchController.searchBar.backgroundColor = UIColor.gray
+        //self.searchController.searchBar.barTintColor = baseColor//background
+        self.searchController.searchBar.alpha = 0.8
+        //self.searchController.searchBar.prompt = "提示说明" //A single line of text displayed at the top of the search bar.
+        self.searchController.searchBar.tintColor = baseColor
         self.searchController.delegate = self
         self.searchController.searchResultsUpdater = self
         self.searchController.hidesNavigationBarDuringPresentation = false
-        self.searchController.searchBar.barStyle = .black
+        self.searchController.searchBar.barStyle = .blackTranslucent
+        self.searchController.searchBar.searchBarStyle = .prominent
         self.searchController.searchBar.placeholder = "请输入关键字"
         //self.searchController.searchBar.frame = CGRect(x: 0, y: 0, width: 100, height: 30)
         self.searchController.searchBar.sizeToFit()
