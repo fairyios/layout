@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0502D94B2EB0DFE807030F90 /* Pods_LayoutTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F52B4BA725BEE46C604F335A /* Pods_LayoutTests.framework */; };
 		2C1C9D2121875BF2009F1C03 /* IosHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1C9D2021875BF1009F1C03 /* IosHelper.swift */; };
 		2C5727672182213300AADF3C /* UITableViewCellReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5727662182213300AADF3C /* UITableViewCellReusable.swift */; };
 		2C709F0A2185ED1700C60597 /* UIViewInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C709F092185ED1700C60597 /* UIViewInspectable.swift */; };
@@ -19,6 +20,7 @@
 		2CD905AE2189DA4700956419 /* LocalizedHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD905AD2189DA4700956419 /* LocalizedHelper.swift */; };
 		2CD905B52189FBF900956419 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CD905B32189FBF900956419 /* InfoPlist.strings */; };
 		2CD905C4218A034800956419 /* huaqiangu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2CD905C6218A034800956419 /* huaqiangu.jpg */; };
+		2CD905D1218A0D5A00956419 /* LayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD905D0218A0D5A00956419 /* LayoutTests.swift */; };
 		2CEED6CE2181F81B007B0374 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEED6CD2181F81B007B0374 /* AppDelegate.swift */; };
 		2CEED6D02181F81B007B0374 /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEED6CF2181F81B007B0374 /* TableController.swift */; };
 		2CEED6D32181F81B007B0374 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CEED6D12181F81B007B0374 /* Main.storyboard */; };
@@ -26,6 +28,16 @@
 		2CEED6D82181F81B007B0374 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CEED6D62181F81B007B0374 /* LaunchScreen.storyboard */; };
 		EE21AAAAB1013DF3265E29F0 /* Pods_layout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 690F77BB5F157BED8296B501 /* Pods_layout.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2CD905D3218A0D5A00956419 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CEED6C22181F81B007B0374 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CEED6C92181F81B007B0374;
+			remoteInfo = layout;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2C1C9D2021875BF1009F1C03 /* IosHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IosHelper.swift; sourceTree = "<group>"; };
@@ -48,6 +60,9 @@
 		2CD905C7218A034900956419 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = en; path = en.lproj/huaqiangu.jpg; sourceTree = "<group>"; };
 		2CD905C8218A034900956419 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "zh-Hans"; path = "zh-Hans.lproj/huaqiangu.jpg"; sourceTree = "<group>"; };
 		2CD905C9218A034A00956419 /* ja */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ja; path = ja.lproj/huaqiangu.jpg; sourceTree = "<group>"; };
+		2CD905CE218A0D5A00956419 /* LayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CD905D0218A0D5A00956419 /* LayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutTests.swift; sourceTree = "<group>"; };
+		2CD905D2218A0D5A00956419 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CEED6CA2181F81B007B0374 /* layout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = layout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CEED6CD2181F81B007B0374 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CEED6CF2181F81B007B0374 /* TableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
@@ -58,9 +73,20 @@
 		461F8D8B548688F922DA2BED /* Pods-layout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-layout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-layout/Pods-layout.debug.xcconfig"; sourceTree = "<group>"; };
 		690F77BB5F157BED8296B501 /* Pods_layout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_layout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93079B9F05CFADD46B68D8DB /* Pods-layout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-layout.release.xcconfig"; path = "Pods/Target Support Files/Pods-layout/Pods-layout.release.xcconfig"; sourceTree = "<group>"; };
+		96C32D5C0541EC00A3649573 /* Pods-LayoutTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LayoutTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LayoutTests/Pods-LayoutTests.debug.xcconfig"; sourceTree = "<group>"; };
+		99C169B0AEFF2DA23E39B699 /* Pods-LayoutTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LayoutTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LayoutTests/Pods-LayoutTests.release.xcconfig"; sourceTree = "<group>"; };
+		F52B4BA725BEE46C604F335A /* Pods_LayoutTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LayoutTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2CD905CB218A0D5A00956419 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0502D94B2EB0DFE807030F90 /* Pods_LayoutTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2CEED6C72181F81B007B0374 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -88,10 +114,20 @@
 			path = images;
 			sourceTree = "<group>";
 		};
+		2CD905CF218A0D5A00956419 /* LayoutTests */ = {
+			isa = PBXGroup;
+			children = (
+				2CD905D0218A0D5A00956419 /* LayoutTests.swift */,
+				2CD905D2218A0D5A00956419 /* Info.plist */,
+			);
+			path = LayoutTests;
+			sourceTree = "<group>";
+		};
 		2CEED6C12181F81B007B0374 = {
 			isa = PBXGroup;
 			children = (
 				2CEED6CC2181F81B007B0374 /* layout */,
+				2CD905CF218A0D5A00956419 /* LayoutTests */,
 				2CEED6CB2181F81B007B0374 /* Products */,
 				CBD66F6E0DD2B69F55387933 /* Pods */,
 				5D77D84821E2537EBCE572BC /* Frameworks */,
@@ -102,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				2CEED6CA2181F81B007B0374 /* layout.app */,
+				2CD905CE218A0D5A00956419 /* LayoutTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				690F77BB5F157BED8296B501 /* Pods_layout.framework */,
+				F52B4BA725BEE46C604F335A /* Pods_LayoutTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -160,6 +198,8 @@
 			children = (
 				461F8D8B548688F922DA2BED /* Pods-layout.debug.xcconfig */,
 				93079B9F05CFADD46B68D8DB /* Pods-layout.release.xcconfig */,
+				96C32D5C0541EC00A3649573 /* Pods-LayoutTests.debug.xcconfig */,
+				99C169B0AEFF2DA23E39B699 /* Pods-LayoutTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -167,6 +207,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2CD905CD218A0D5A00956419 /* LayoutTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CD905D5218A0D5A00956419 /* Build configuration list for PBXNativeTarget "LayoutTests" */;
+			buildPhases = (
+				E8EBB09907081A499F882FF7 /* [CP] Check Pods Manifest.lock */,
+				2CD905CA218A0D5A00956419 /* Sources */,
+				2CD905CB218A0D5A00956419 /* Frameworks */,
+				2CD905CC218A0D5A00956419 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CD905D4218A0D5A00956419 /* PBXTargetDependency */,
+			);
+			name = LayoutTests;
+			productName = LayoutTests;
+			productReference = 2CD905CE218A0D5A00956419 /* LayoutTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		2CEED6C92181F81B007B0374 /* layout */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2CEED6DC2181F81B007B0374 /* Build configuration list for PBXNativeTarget "layout" */;
@@ -195,6 +254,10 @@
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = fairyios;
 				TargetAttributes = {
+					2CD905CD218A0D5A00956419 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 2CEED6C92181F81B007B0374;
+					};
 					2CEED6C92181F81B007B0374 = {
 						CreatedOnToolsVersion = 10.0;
 					};
@@ -216,11 +279,19 @@
 			projectRoot = "";
 			targets = (
 				2CEED6C92181F81B007B0374 /* layout */,
+				2CD905CD218A0D5A00956419 /* LayoutTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2CD905CC218A0D5A00956419 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2CEED6C82181F81B007B0374 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -258,9 +329,39 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E8EBB09907081A499F882FF7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LayoutTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2CD905CA218A0D5A00956419 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CD905D1218A0D5A00956419 /* LayoutTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2CEED6C62181F81B007B0374 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -281,6 +382,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2CD905D4218A0D5A00956419 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CEED6C92181F81B007B0374 /* layout */;
+			targetProxy = 2CD905D3218A0D5A00956419 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2CD905B32189FBF900956419 /* InfoPlist.strings */ = {
@@ -326,6 +435,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2CD905D6218A0D5A00956419 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96C32D5C0541EC00A3649573 /* Pods-LayoutTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 669L99RDZ5;
+				INFOPLIST_FILE = LayoutTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fairyios.LayoutTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/layout.app/layout";
+			};
+			name = Debug;
+		};
+		2CD905D7218A0D5A00956419 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99C169B0AEFF2DA23E39B699 /* Pods-LayoutTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 669L99RDZ5;
+				INFOPLIST_FILE = LayoutTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fairyios.LayoutTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/layout.app/layout";
+			};
+			name = Release;
+		};
 		2CEED6DA2181F81B007B0374 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -485,6 +636,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2CD905D5218A0D5A00956419 /* Build configuration list for PBXNativeTarget "LayoutTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CD905D6218A0D5A00956419 /* Debug */,
+				2CD905D7218A0D5A00956419 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2CEED6C52181F81B007B0374 /* Build configuration list for PBXProject "layout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

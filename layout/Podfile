@@ -8,3 +8,12 @@ target 'layout' do
   # Pods for layout
 
 end
+
+
+target 'LayoutTests' do
+    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+    use_frameworks!
+    
+    # Pods for layout
+    
+end
