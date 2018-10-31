@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class SpinnerController : UIViewController {
+final class ConstraintController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         

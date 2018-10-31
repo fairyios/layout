@@ -553,17 +553,17 @@
             </objects>
             <point key="canvasLocation" x="616.79999999999995" y="102.99850074962519"/>
         </scene>
-        <!--加载中-->
+        <!--约束-->
         <scene sceneID="l3v-3b-18H">
             <objects>
-                <viewController id="NWI-hG-v3d" customClass="SpinnerController" customModule="layout" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NWI-hG-v3d" customClass="ConstraintController" customModule="layout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hMB-zg-C1C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="IPC-83-gH3"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="加载中" id="jBh-o8-2GX"/>
+                    <tabBarItem key="tabBarItem" title="约束" id="jBh-o8-2GX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZAF-2z-1GR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
