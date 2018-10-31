@@ -1,0 +1,5 @@
+/* Bundle name */
+"CFBundleName" = "日语布局";
+"NSCameraUsageDescription" = "此App需要使用摄像头，请您同意(japanese)";
+"NSPhotoLibraryUsageDescription" = "此App需要调取手机相册，请您同意(japanese)";
+
