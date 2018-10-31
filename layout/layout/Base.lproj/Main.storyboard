@@ -576,10 +576,6 @@
                     <tabBarItem key="tabBarItem" title="引导页" id="4w2-hR-jBO"/>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A1A-rh-P4B" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="maF-uU-xV2">
-                    <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </activityIndicatorView>
             </objects>
             <point key="canvasLocation" x="617" y="877"/>
         </scene>

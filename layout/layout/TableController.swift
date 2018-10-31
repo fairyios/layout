@@ -40,9 +40,7 @@ class TableController: UIViewController {
      
     }
     
-    @objc func refreshData() {
-        
-    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -156,6 +154,11 @@ extension TableController {
 // MARK: - UITableViewDelegate
 extension TableController : UITableViewDelegate {
     
+    
+    /// 更新列表数据
+    @objc func refreshData() {
+        self.myTableView.refreshControl?.endRefreshing()
+    }
     
     /// 选中第几行
     ///
