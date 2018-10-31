@@ -13,7 +13,7 @@ class TableController: UIViewController {
     @objc var attribute: String = ""
     @objc var myMethod2 = {}
     @objc var myMethod3 = {}
-    lazy var myMethod = {}()
+    //lazy var myMethod = {}()
 
     var areas: [AreaModel] = AreaModel.getDemos()
     var searchController: UISearchController!
