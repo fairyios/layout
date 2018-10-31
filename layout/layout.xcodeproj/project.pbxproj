@@ -18,6 +18,7 @@
 		2CD74EFE2183083C00AD937B /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD74EFD2183083C00AD937B /* DetailController.swift */; };
 		2CD905AE2189DA4700956419 /* LocalizedHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD905AD2189DA4700956419 /* LocalizedHelper.swift */; };
 		2CD905B52189FBF900956419 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CD905B32189FBF900956419 /* InfoPlist.strings */; };
+		2CD905C4218A034800956419 /* huaqiangu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2CD905C6218A034800956419 /* huaqiangu.jpg */; };
 		2CEED6CE2181F81B007B0374 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEED6CD2181F81B007B0374 /* AppDelegate.swift */; };
 		2CEED6D02181F81B007B0374 /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEED6CF2181F81B007B0374 /* TableController.swift */; };
 		2CEED6D32181F81B007B0374 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CEED6D12181F81B007B0374 /* Main.storyboard */; };
@@ -43,6 +44,10 @@
 		2CD905B22189F8F900956419 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		2CD905B42189FBF900956419 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		2CD905B62189FC2300956419 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2CD905C5218A034800956419 /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Base; path = Base.lproj/huaqiangu.jpg; sourceTree = "<group>"; };
+		2CD905C7218A034900956419 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = en; path = en.lproj/huaqiangu.jpg; sourceTree = "<group>"; };
+		2CD905C8218A034900956419 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "zh-Hans"; path = "zh-Hans.lproj/huaqiangu.jpg"; sourceTree = "<group>"; };
+		2CD905C9218A034A00956419 /* ja */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ja; path = ja.lproj/huaqiangu.jpg; sourceTree = "<group>"; };
 		2CEED6CA2181F81B007B0374 /* layout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = layout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CEED6CD2181F81B007B0374 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CEED6CF2181F81B007B0374 /* TableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
@@ -75,6 +80,14 @@
 			path = m;
 			sourceTree = "<group>";
 		};
+		2CD905B9218A025300956419 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				2CD905C6218A034800956419 /* huaqiangu.jpg */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		2CEED6C12181F81B007B0374 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +109,7 @@
 		2CEED6CC2181F81B007B0374 /* layout */ = {
 			isa = PBXGroup;
 			children = (
+				2CD905B9218A025300956419 /* images */,
 				2CD74EFA2182B69000AD937B /* m */,
 				2CEED6E02181FE1F007B0374 /* tables */,
 				2CEED6DF2181FE13007B0374 /* extensions */,
@@ -194,6 +208,7 @@
 				en,
 				Base,
 				"zh-Hans",
+				ja,
 			);
 			mainGroup = 2CEED6C12181F81B007B0374;
 			productRefGroup = 2CEED6CB2181F81B007B0374 /* Products */;
@@ -211,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CEED6D82181F81B007B0374 /* LaunchScreen.storyboard in Resources */,
+				2CD905C4218A034800956419 /* huaqiangu.jpg in Resources */,
 				2CD905B52189FBF900956419 /* InfoPlist.strings in Resources */,
 				2CEED6D52181F81B007B0374 /* Assets.xcassets in Resources */,
 				2CEED6D32181F81B007B0374 /* Main.storyboard in Resources */,
@@ -274,6 +290,17 @@
 				2CD905B62189FC2300956419 /* ja */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2CD905C6218A034800956419 /* huaqiangu.jpg */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CD905C5218A034800956419 /* Base */,
+				2CD905C7218A034900956419 /* en */,
+				2CD905C8218A034900956419 /* zh-Hans */,
+				2CD905C9218A034A00956419 /* ja */,
+			);
+			name = huaqiangu.jpg;
 			sourceTree = "<group>";
 		};
 		2CEED6D12181F81B007B0374 /* Main.storyboard */ = {
