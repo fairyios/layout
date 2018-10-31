@@ -10,7 +10,10 @@ import UIKit
 
 class TableController: UIViewController {
     
-    
+    @objc var attribute: String = ""
+    @objc var myMethod2 = {}
+    @objc var myMethod3 = {}
+    lazy var myMethod = {}()
 
     var areas: [AreaModel] = AreaModel.getDemos()
     var searchController: UISearchController!
@@ -22,6 +25,22 @@ class TableController: UIViewController {
         super.viewDidLoad()
         
         self.initUISearchController()
+        
+        let _ = #selector(getter: self.attribute)
+        let _ = #selector(setter: self.attribute)
+        let _ = #selector(self.refreshData)
+        let _ = #selector(getter: self.myMethod2)
+        let _ = #selector(setter: self.myMethod3)
+        
+        
+        self.myTableView.refreshControl = UIRefreshControl()
+        self.myTableView.refreshControl?.addTarget(self, action: #selector(self.refreshData), for: .valueChanged)
+        //UIViewController.accessibilityPerformMagicTap ：【open func accessibilityPerformMagicTap() -> Bool】
+        //self.myTableView.refreshControl?.addTarget(self, action: #selector(UIViewController.accessibilityPerformMagicTap), for: .valueChanged)
+     
+    }
+    
+    @objc func refreshData() {
         
     }
     override func viewDidAppear(_ animated: Bool) {

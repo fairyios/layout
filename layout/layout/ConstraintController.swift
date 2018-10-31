@@ -18,6 +18,7 @@ final class ConstraintController : UIViewController {
         spinner.backgroundColor = UIColor.yellow
         spinner.tintColor = UIColor.red
         spinner.isHidden = false
+        spinner.hidesWhenStopped = true
         spinner.style = .gray
         spinner.startAnimating()
         //没有关闭且在“self.view.addSubview(spinner)”前“spinner.addConstraint(width)”会异常
