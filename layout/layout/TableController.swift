@@ -29,8 +29,8 @@ class TableController: UIViewController {
         
         //guard LocalSet.IsLaunched == true else { return }
         
-        let dynamic = DynamicPageController()
-        self.present(dynamic, animated: true, completion: nil)
+        //let dynamic = DynamicPageController()
+        //self.present(dynamic, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {

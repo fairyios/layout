@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cQF-JD-JJn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zz1-ds-cD4">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="K1B-Mj-GWZ">
-                                <rect key="frame" x="0.0" y="32" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="56.5" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reusableCell" rowHeight="80" id="gD5-N8-XF9" customClass="UITableViewCellReusable" customModule="layout" customModuleProvider="target">
@@ -401,7 +401,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yaodu" translatesAutoresizingMaskIntoConstraints="NO" id="ddJ-g3-acn" userLabel="背景图片">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                             </imageView>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDZ-Kh-zEL">
                                 <rect key="frame" x="310" y="79" width="50" height="50"/>
@@ -509,10 +509,29 @@
             </objects>
             <point key="canvasLocation" x="3133.5999999999999" y="102.99850074962519"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="9lP-8l-1r1">
+            <objects>
+                <tabBarController id="zz1-ds-cD4" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vCv-Zy-F7y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="cQF-JD-JJn" kind="relationship" relationship="viewControllers" id="Rkl-hx-ntV"/>
+                        <segue destination="rlD-kp-y5F" kind="relationship" relationship="viewControllers" id="nSJ-9N-6yd"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OaZ-av-ve4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-434" y="103"/>
+        </scene>
         <!--导航栏-->
         <scene sceneID="stZ-8h-3Zx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cQF-JD-JJn" userLabel="导航栏" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="首页" id="771-1U-cMb"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="LNo-XV-Qbm">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -533,13 +552,15 @@
             </objects>
             <point key="canvasLocation" x="616.79999999999995" y="102.99850074962519"/>
         </scene>
-        <!--Dynamic Page Controller-->
+        <!--引导页-->
         <scene sceneID="L5U-15-Wq6">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="rlD-kp-y5F" customClass="DynamicPageController" customModule="layout" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="rlD-kp-y5F" customClass="DynamicPageController" customModule="layout" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="引导页" id="4w2-hR-jBO"/>
+                </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A1A-rh-P4B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="628" y="779"/>
+            <point key="canvasLocation" x="617" y="877"/>
         </scene>
     </scenes>
     <resources>
