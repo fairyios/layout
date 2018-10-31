@@ -533,6 +533,14 @@
             </objects>
             <point key="canvasLocation" x="616.79999999999995" y="102.99850074962519"/>
         </scene>
+        <!--Dynamic Page Controller-->
+        <scene sceneID="L5U-15-Wq6">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="rlD-kp-y5F" customClass="DynamicPageController" customModule="layout" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A1A-rh-P4B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="628" y="779"/>
+        </scene>
     </scenes>
     <resources>
         <image name="baiyun" width="200" height="200"/>

@@ -24,6 +24,14 @@ class TableController: UIViewController {
         self.initUISearchController()
         
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        //guard LocalSet.IsLaunched == true else { return }
+        
+        let dynamic = DynamicPageController()
+        self.present(dynamic, animated: true, completion: nil)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
