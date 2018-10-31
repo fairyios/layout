@@ -521,6 +521,7 @@
                     <connections>
                         <segue destination="cQF-JD-JJn" kind="relationship" relationship="viewControllers" id="Rkl-hx-ntV"/>
                         <segue destination="rlD-kp-y5F" kind="relationship" relationship="viewControllers" id="nSJ-9N-6yd"/>
+                        <segue destination="NWI-hG-v3d" kind="relationship" relationship="viewControllers" id="ZYC-E5-ZD4"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OaZ-av-ve4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -551,6 +552,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="356-AS-KZn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="616.79999999999995" y="102.99850074962519"/>
+        </scene>
+        <!--加载中-->
+        <scene sceneID="l3v-3b-18H">
+            <objects>
+                <viewController id="NWI-hG-v3d" customClass="SpinnerController" customModule="layout" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hMB-zg-C1C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="IPC-83-gH3"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="加载中" id="jBh-o8-2GX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZAF-2z-1GR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-445" y="890"/>
         </scene>
         <!--引导页-->
         <scene sceneID="L5U-15-Wq6">
