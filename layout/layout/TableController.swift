@@ -116,9 +116,9 @@ extension TableController {
     ///
     /// - Parameter indexPath: indexPath description
     public func FuncDeleteAction(indexPath: IndexPath) {
-        let con = UIAlertController(title: "删除?", message: "是否确定删除？", preferredStyle: .alert)
-        con.addAction(UIAlertAction(title: "取消", style: .cancel, handler: nil))
-        con.addAction(UIAlertAction(title: "删除", style: .destructive, handler: {(ac)->Void in
+        let con = UIAlertController(title: "删除?", message: "是否确定删除,删除之后数据无法恢复?", preferredStyle: .alert)
+        con.addAction(UIAlertAction(title: LocalizedHelper.Cancel, style: .cancel, handler: nil))
+        con.addAction(UIAlertAction(title: LocalizedHelper.Delete, style: .destructive, handler: {(ac)->Void in
             self.areas.remove(at: indexPath.row)
             self.myTableView.deleteRows(at: [indexPath], with: .automatic)
             print("删除成功")
@@ -273,10 +273,10 @@ extension TableController : UITableViewDelegate {
     ///   - indexPath: indexPath description
     /// - Returns: return value description
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let shareAction = UITableViewRowAction(style: .destructive, title: "分享") { (UITableViewRowAction, IndexPath) in
+        let shareAction = UITableViewRowAction(style: .destructive, title: LocalizedHelper.Share) { (UITableViewRowAction, IndexPath) in
             
         }
-        let delteAction = UITableViewRowAction(style: .normal, title: "删除") { (action,index) in
+        let delteAction = UITableViewRowAction(style: .normal, title: LocalizedHelper.Delete) { (action,index) in
             self.FuncDeleteAction(indexPath: indexPath)
         }
         return [shareAction, delteAction]
