@@ -7,17 +7,17 @@
 //
 
 import XCTest
-@testable import Pods_layout
+//@testable import Layout
 
 class LayoutTests: XCTestCase {
 
-    var tableController: TableController!
+    //var tableController: TableController!
     
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         
-        let main = UIStoryboard(name: "Main", bundle: Bundle.main)
-        tableController = main.instantiateViewController(withIdentifier: "TableControllerStoryboardID") as! TableController
+        //let main = UIStoryboard(name: "Main", bundle: Bundle.main)
+        //tableController = main.instantiateViewController(withIdentifier: "TableControllerStoryboardID") as! TableController
         
         
         
