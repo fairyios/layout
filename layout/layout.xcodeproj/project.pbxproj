@@ -21,7 +21,8 @@
 		2CD905B52189FBF900956419 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CD905B32189FBF900956419 /* InfoPlist.strings */; };
 		2CD905C4218A034800956419 /* huaqiangu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2CD905C6218A034800956419 /* huaqiangu.jpg */; };
 		2CD905D1218A0D5A00956419 /* LayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD905D0218A0D5A00956419 /* LayoutTests.swift */; };
-		2CDB445D218AAF860003E6BA /* HuaqianguController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDB445C218AAF860003E6BA /* HuaqianguController.swift */; };
+		2CDB445D218AAF860003E6BA /* HuaTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDB445C218AAF860003E6BA /* HuaTableController.swift */; };
+		2CDB4460218B5DCF0003E6BA /* HuaTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDB445F218B5DCF0003E6BA /* HuaTableCell.swift */; };
 		2CEED6CE2181F81B007B0374 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEED6CD2181F81B007B0374 /* AppDelegate.swift */; };
 		2CEED6D02181F81B007B0374 /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEED6CF2181F81B007B0374 /* TableController.swift */; };
 		2CEED6D32181F81B007B0374 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CEED6D12181F81B007B0374 /* Main.storyboard */; };
@@ -64,7 +65,8 @@
 		2CD905CE218A0D5A00956419 /* LayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CD905D0218A0D5A00956419 /* LayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutTests.swift; sourceTree = "<group>"; };
 		2CD905D2218A0D5A00956419 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2CDB445C218AAF860003E6BA /* HuaqianguController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuaqianguController.swift; sourceTree = "<group>"; };
+		2CDB445C218AAF860003E6BA /* HuaTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuaTableController.swift; sourceTree = "<group>"; };
+		2CDB445F218B5DCF0003E6BA /* HuaTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuaTableCell.swift; sourceTree = "<group>"; };
 		2CEED6CA2181F81B007B0374 /* layout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = layout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CEED6CD2181F81B007B0374 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CEED6CF2181F81B007B0374 /* TableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,15 @@
 			path = LayoutTests;
 			sourceTree = "<group>";
 		};
+		2CDB445E218B5D9F0003E6BA /* huaqiangu */ = {
+			isa = PBXGroup;
+			children = (
+				2CDB445C218AAF860003E6BA /* HuaTableController.swift */,
+				2CDB445F218B5DCF0003E6BA /* HuaTableCell.swift */,
+			);
+			path = huaqiangu;
+			sourceTree = "<group>";
+		};
 		2CEED6C12181F81B007B0374 = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +159,7 @@
 		2CEED6CC2181F81B007B0374 /* layout */ = {
 			isa = PBXGroup;
 			children = (
+				2CDB445E218B5D9F0003E6BA /* huaqiangu */,
 				2CD905B9218A025300956419 /* images */,
 				2CD74EFA2182B69000AD937B /* m */,
 				2CEED6E02181FE1F007B0374 /* tables */,
@@ -158,7 +170,6 @@
 				2CD74EFD2183083C00AD937B /* DetailController.swift */,
 				2CAB052521889AAA00FFDE7D /* DynamicPageController.swift */,
 				2C709F0B2185FB0700C60597 /* RatingController.swift */,
-				2CDB445C218AAF860003E6BA /* HuaqianguController.swift */,
 				2CEED6D12181F81B007B0374 /* Main.storyboard */,
 				2CEED6D42181F81B007B0374 /* Assets.xcassets */,
 				2CEED6D62181F81B007B0374 /* LaunchScreen.storyboard */,
@@ -376,12 +387,13 @@
 				2CAB052621889AAA00FFDE7D /* DynamicPageController.swift in Sources */,
 				2CEED6CE2181F81B007B0374 /* AppDelegate.swift in Sources */,
 				2CD74EFE2183083C00AD937B /* DetailController.swift in Sources */,
+				2CDB4460218B5DCF0003E6BA /* HuaTableCell.swift in Sources */,
 				2C1C9D2121875BF2009F1C03 /* IosHelper.swift in Sources */,
 				2C709F0C2185FB0700C60597 /* RatingController.swift in Sources */,
 				2CD905AE2189DA4700956419 /* LocalizedHelper.swift in Sources */,
 				2CAE3F3521894857006BA8D8 /* LocalSet.swift in Sources */,
 				2C5727672182213300AADF3C /* UITableViewCellReusable.swift in Sources */,
-				2CDB445D218AAF860003E6BA /* HuaqianguController.swift in Sources */,
+				2CDB445D218AAF860003E6BA /* HuaTableController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
