@@ -529,21 +529,21 @@
             </objects>
             <point key="canvasLocation" x="-434" y="103"/>
         </scene>
-        <!--View Controller-->
+        <!--花千骨-->
         <scene sceneID="OtA-yR-UzN">
             <objects>
-                <viewController id="SX9-XG-fag" sceneMemberID="viewController">
+                <viewController id="SX9-XG-fag" customClass="HuaqianguController" customModule="layout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I42-f0-6sO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="cAV-xN-3Am"/>
                     </view>
-                    <navigationItem key="navigationItem" id="uwO-E6-Fr0"/>
+                    <navigationItem key="navigationItem" title="花千骨" id="uwO-E6-Fr0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZV2-NY-aNT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1393" y="-629"/>
+            <point key="canvasLocation" x="1392.8" y="-629.2353823088456"/>
         </scene>
         <!--导航栏-->
         <scene sceneID="stZ-8h-3Zx">
