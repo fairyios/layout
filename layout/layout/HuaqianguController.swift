@@ -37,9 +37,9 @@ final class HuaqianguController: UIViewController {
         self.table.separatorStyle = .singleLine
         self.table.dataSource = self
         self.table.delegate = self
-        //self.table.register(UINib(nibName: "UITableViewCellFairy", bundle: nil), forCellReuseIdentifier: "Nib")
-        //self.table.register(UITableViewCellFairy.self, forCellReuseIdentifier: self.reuseableCellName)
-        self.table.register(UITableViewCellFairy.classForCoder(), forCellReuseIdentifier: self.reuseableCellName)
+        //self.table.register(UINib(nibName: "HuaqianguCell", bundle: nil), forCellReuseIdentifier: "Nib")
+        //self.table.register(HuaqianguCell.self, forCellReuseIdentifier: self.reuseableCellName)
+        self.table.register(HuaqianguCell.classForCoder(), forCellReuseIdentifier: self.reuseableCellName)
         
         self.view.addSubview(self.table)
         
@@ -57,9 +57,9 @@ extension HuaqianguController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var cell = tableView.dequeueReusableCell(withIdentifier: reuseableCellName) as? UITableViewCellFairy
+        var cell = tableView.dequeueReusableCell(withIdentifier: reuseableCellName) as? HuaqianguCell
         if (cell == nil) {
-            cell = UITableViewCellFairy(style: .default, reuseIdentifier: self.reuseableCellName)
+            cell = HuaqianguCell(style: .default, reuseIdentifier: self.reuseableCellName)
         }
         return cell!
     }
@@ -74,8 +74,8 @@ extension HuaqianguController: UITableViewDelegate {
 }
 
 
-/// UITableViewCellFairy|自定义单元格
-final class UITableViewCellFairy : UITableViewCell {
+/// HuaqianguCell|自定义单元格
+final class HuaqianguCell : UITableViewCell {
     
     lazy var myImageView: UIImageView! = {
         let imageView = UIImageView(image: #imageLiteral(resourceName: "huaqiangu_logo_600x600iPhonePortraitiOS89_414x736pt"))
@@ -113,7 +113,7 @@ final class UITableViewCellFairy : UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        print(String(describing: UITableViewCellFairy.self))
+        print(String(describing: HuaqianguCell.self))
         print(String(describing: self.myImageView))
         
         self.myStack.addSubview(self.myImageView)
