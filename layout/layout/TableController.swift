@@ -10,6 +10,9 @@ import UIKit
 
 class TableController: UIViewController {
     
+    //@objc 暴露给OC的代码
+    //在swift4.0中，所有的swift方法都默认是OC不可见得。
+    //如果想让OC调用某些swift方法，需要在方法前面添加@objc关键字，以此暴露给OC
     @objc var attribute: String = ""
     @objc var myMethod2 = {}
     @objc var myMethod3 = {}
