@@ -22,8 +22,6 @@ final class HuaTableController: UIViewController {
         super.viewDidLoad()
         self.initTableView()
         
-//        self.navigationItem.backBarButtonItem?.title = "" // 从这个视图跳转到另一个实图后，在另一个视图里面显示的返回title
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
     override func didReceiveMemoryWarning() {
@@ -95,7 +93,9 @@ extension HuaTableController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("选中第\(indexPath.row)行")
         
-        let qian = QianTableController()
+        //self.navigationItem.backBarButtonItem?.title = "" // 从这个视图跳转到另一个实图后，在另一个视图里面显示的返回title
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+        let qian = QianTableController(backBarButtonItem: self.navigationItem.backBarButtonItem)
         self.show(qian, sender: nil)
     }
     

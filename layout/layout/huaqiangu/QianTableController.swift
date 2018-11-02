@@ -16,6 +16,19 @@ final class QianTableController: UIViewController {
     let reuseableCellName: String = "reuseableCell"
     var table: UITableView!
     var tableSource: [String] = [String](repeatElement("花千骨v花千骨v花千骨", count: 11)) // 创建重复数组
+    var backBarButtonItem: UIBarButtonItem!
+    
+    convenience init(backBarButtonItem preBackItem: UIBarButtonItem?) {
+        self.init()
+        
+        debugPrint("preBackItem ?? Any.self")
+        debugPrint(preBackItem ?? Any.self)
+        self.backBarButtonItem = preBackItem!
+    }
+    
+//    required init?(coder aDecoder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -49,18 +62,34 @@ final class QianTableController: UIViewController {
         debugPrint("self.navigationItem.leftBarButtonItem ?? (Any).self")
         debugPrint(self.navigationItem.leftBarButtonItem ?? (Any).self)
         
+        debugPrint("self.navigationItem.titleView?.tintColor ?? (Any).self")
+        debugPrint(self.navigationItem.titleView?.tintColor ?? (Any).self)
+        
         //self.navigationController?.title 是UIViewController的属性
         self.navigationController?.title = "卡片列表2"
         self.navigationController?.navigationBar.tintColor = UIColor.white
-        
+
         self.navigationItem.title = "卡片列表"
+        self.navigationItem.titleView?.backgroundColor = UIColor.gray
         self.navigationItem.titleView?.tintColor = UIColor.white
-//        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "hgghg", style: .plain, target: nil, action: nil)
-//        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: UIView())
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "dsfs", style: .done, target: nil, action: nil)
-        self.navigationItem.backBarButtonItem?.tintColor = UIColor.white
-        debugPrint("self.navigationItem.backBarButtonItem?.title ?? (Any).self")
-        debugPrint(self.navigationItem.backBarButtonItem?.title ?? (Any).self)
+        
+//        //self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "dsfs", style: .done, target: self, action: nil)
+//        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: nil)
+//        self.navigationItem.leftBarButtonItem?.customView?.backgroundColor = UIColor.orange
+//        //self.navigationItem.leftBarButtonItem?.image = #imageLiteral(resourceName: "personal_home_back_white_24x24_")
+//        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.red
+//
+//        debugPrint("self.navigationItem.leftBarButtonItem?.title ?? (Any).self")
+//        debugPrint(self.navigationItem.leftBarButtonItem?.title ?? (Any).self)
+//
+//        debugPrint("self.navigationItem.leftBarButtonItem?.customView?.frame.width ?? (Any).self")
+//        debugPrint(self.navigationItem.leftBarButtonItem?.customView?.frame.width ?? (Any).self)
+//
+//        debugPrint("self.navigationItem.titleView?.frame ?? (Any).self")
+//        debugPrint(self.navigationItem.titleView?.frame ?? (Any).self)
+        
+        //self.navigationItem.leftBarButtonItem = self.backBarButtonItem
+        
     }
     
     override func didReceiveMemoryWarning() {
