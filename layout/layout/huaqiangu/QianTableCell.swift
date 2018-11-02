@@ -19,15 +19,15 @@ final class QianTableCell : UITableViewCell {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.backgroundColor = UIColor.clear
         imageView.contentMode = .scaleToFill
-        imageView.layer.cornerRadius = CGFloat(30)
+        //imageView.layer.cornerRadius = CGFloat(30)
         //imageView.clipsToBounds = true
         
         imageView.layer.borderWidth = CGFloat(1.0)
-        imageView.layer.borderColor = UIColor.orange.cgColor
-        imageView.layer.shadowColor = UIColor.black.cgColor// UIColor.red.cgColor
-        imageView.layer.shadowRadius = CGFloat(1)
-        imageView.layer.shadowOpacity = 1
-        imageView.layer.shadowOffset = CGSize(width: 10, height: 10)
+        imageView.layer.borderColor = ColorDefault.Theme.cgColor
+        imageView.layer.shadowColor = ColorDefault.Theme.cgColor// UIColor.red.cgColor
+        imageView.layer.shadowRadius = CGFloat(0.7)
+        imageView.layer.shadowOpacity = 0.7
+        imageView.layer.shadowOffset = CGSize(width: 2, height: 2)
         //imageView.layer.shadowPath = UIBezierPath.init(roundedRect: self.bounds, cornerRadius: 5).cgPath
         //imageView.layer.contents = UIScreen.main.scale
         
@@ -38,7 +38,7 @@ final class QianTableCell : UITableViewCell {
     lazy var myLabel: UILabel! = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.backgroundColor = UIColor.orange
+        label.backgroundColor = ColorDefault.Theme
         //label.textColor = UIColor.red
         //label.frame.size.width = CGFloat(50)
         //label.frame.size.height = CGFloat(50)

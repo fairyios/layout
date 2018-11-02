@@ -9,10 +9,70 @@
       "color" : {
         "color-space" : "srgb",
         "components" : {
-          "red" : "0xEE",
+          "red" : "0.933",
           "alpha" : "1.000",
-          "blue" : "0xF6",
-          "green" : "0xAD"
+          "blue" : "0.965",
+          "green" : "0.678"
+        }
+      }
+    },
+    {
+      "idiom" : "iphone",
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "red" : "0.933",
+          "alpha" : "1.000",
+          "blue" : "0.965",
+          "green" : "0.678"
+        }
+      }
+    },
+    {
+      "idiom" : "ipad",
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "red" : "0.933",
+          "alpha" : "1.000",
+          "blue" : "0.965",
+          "green" : "0.678"
+        }
+      }
+    },
+    {
+      "idiom" : "watch",
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "red" : "0.933",
+          "alpha" : "1.000",
+          "blue" : "0.965",
+          "green" : "0.678"
+        }
+      }
+    },
+    {
+      "idiom" : "tv",
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "red" : "0.933",
+          "alpha" : "1.000",
+          "blue" : "0.965",
+          "green" : "0.678"
+        }
+      }
+    },
+    {
+      "idiom" : "mac",
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "red" : "0.933",
+          "alpha" : "1.000",
+          "blue" : "0.965",
+          "green" : "0.678"
         }
       }
     }
