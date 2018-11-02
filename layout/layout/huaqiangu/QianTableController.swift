@@ -12,7 +12,7 @@ import UIKit
 // QianTableController
 final class QianTableController: UIViewController {
     
-    let rowHeight: CGFloat = CGFloat(80)
+    let rowHeight: CGFloat = QianTableCell.rowHeight
     let reuseableCellName: String = "reuseableCell"
     var table: UITableView!
     var tableSource: [String] = [String](repeatElement("花千骨v花千骨v花千骨", count: 11)) // 创建重复数组
