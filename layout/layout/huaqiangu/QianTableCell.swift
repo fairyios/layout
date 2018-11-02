@@ -1,5 +1,5 @@
 //
-//  HuaTableCell.swift
+//  QianTableCell.swift
 //  layout
 //
 //  Created by Fairy on 2018/11/2.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-/// HuaTableCell|自定义单元格
-final class HuaTableCell : UITableViewCell {
+/// QianTableCell|自定义单元格
+final class QianTableCell : UITableViewCell {
     
     lazy var myImageView: UIImageView! = {
         let imageView = UIImageView(image: #imageLiteral(resourceName: "huaqiangu_logo_600x600iPhonePortraitiOS89_414x736pt"))
@@ -47,13 +47,13 @@ final class HuaTableCell : UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        print(String(describing: HuaTableCell.self))
-        print(String(describing: self.myImageView))
+        print(String(describing: QianTableCell.self))
+        //print(String(describing: self.myImageView))
         
         self.myStack.addSubview(self.myImageView)
         self.myStack.addSubview(self.myLabel)
         self.addSubview(self.myStack)
-        self.backgroundColor = UIColor.clear
+        self.backgroundColor = UIColor.white
         
         let imageViewConstraintWidth = NSLayoutConstraint(item: self.myImageView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 60)
         let imageViewConstraintHeight = NSLayoutConstraint(item: self.myImageView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 60)
@@ -70,6 +70,7 @@ final class HuaTableCell : UITableViewCell {
         let labelLeading = NSLayoutConstraint(item: self.myLabel, attribute: .leading, relatedBy: .equal, toItem:  self.myStack, attribute: .leading, multiplier: 1, constant: 80)
         let labelTrailing = NSLayoutConstraint(item: self.myLabel, attribute: .trailing, relatedBy: .equal, toItem:  self.myStack, attribute: .trailing, multiplier: 1, constant: -10)
         self.myStack.addConstraints([labelTop, labelBottom, labelLeading, labelTrailing])
+        
         
         let stackLeading = NSLayoutConstraint(item: self.myStack, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1, constant: 10)
         let stackTrailing = NSLayoutConstraint(item: self.myStack, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1, constant: -10)

@@ -1,5 +1,5 @@
 //
-//  HuaTableController.swift
+//  QianTableController.swift
 //  layout
 //
 //  Created by Fairy on 2018/11/1.
@@ -9,21 +9,58 @@
 import UIKit
 
 
-// HuaTableController
-final class HuaTableController: UIViewController {
+// QianTableController
+final class QianTableController: UIViewController {
     
     let rowHeight: CGFloat = CGFloat(80)
     let reuseableCellName: String = "reuseableCell"
     var table: UITableView!
     var tableSource: [String] = [String](repeatElement("花千骨v花千骨v花千骨", count: 11)) // 创建重复数组
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initTableView()
         
-//        self.navigationItem.backBarButtonItem?.title = "" // 从这个视图跳转到另一个实图后，在另一个视图里面显示的返回title
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        debugPrint("self.navigationController?.toolbarItems ?? (Any).self")
+        debugPrint(self.navigationController?.toolbarItems ?? (Any).self)
+        
+        debugPrint("self.navigationController?.navigationBar ?? (Any).self")
+        debugPrint(self.navigationController?.navigationBar ?? (Any).self)
+        
+        debugPrint("self.navigationController?.navigationBar.backItem ?? (Any).self")
+        debugPrint(self.navigationController?.navigationBar.backItem ?? (Any).self)
+        
+        debugPrint("self.navigationController?.navigationBar.items?.count ?? (Any).self")
+        debugPrint(self.navigationController?.navigationBar.items?.count ?? (Any).self)
+        
+        debugPrint("self.navigationController?.navigationBar.items?.first?.title ?? (Any).self")
+        debugPrint(self.navigationController?.navigationBar.items?.first?.title ?? (Any).self)
+        
+        debugPrint("self.navigationController?.navigationItem.title ?? (Any).self")
+        debugPrint(self.navigationController?.navigationItem.title ?? (Any).self)
+        
+        debugPrint("self.navigationItem.backBarButtonItem ?? (Any).self")
+        debugPrint(self.navigationItem.backBarButtonItem ?? (Any).self)
+        
+        debugPrint("self.navigationItem.leftBarButtonItem ?? (Any).self")
+        debugPrint(self.navigationItem.leftBarButtonItem ?? (Any).self)
+        
+        //self.navigationController?.title 是UIViewController的属性
+        self.navigationController?.title = "卡片列表2"
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        
+        self.navigationItem.title = "卡片列表"
+        self.navigationItem.titleView?.tintColor = UIColor.white
+//        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "hgghg", style: .plain, target: nil, action: nil)
+//        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: UIView())
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "dsfs", style: .done, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem?.tintColor = UIColor.white
+        debugPrint("self.navigationItem.backBarButtonItem?.title ?? (Any).self")
+        debugPrint(self.navigationItem.backBarButtonItem?.title ?? (Any).self)
     }
     
     override func didReceiveMemoryWarning() {
@@ -41,9 +78,9 @@ final class HuaTableController: UIViewController {
         self.table.separatorStyle = .singleLine
         self.table.dataSource = self
         self.table.delegate = self
-        //self.table.register(UINib(nibName: "HuaTableCell", bundle: nil), forCellReuseIdentifier: "Nib")
-        //self.table.register(HuaTableCell.self, forCellReuseIdentifier: self.reuseableCellName)
-        self.table.register(HuaTableCell.classForCoder(), forCellReuseIdentifier: self.reuseableCellName)
+        //self.table.register(UINib(nibName: "QianTableCell", bundle: nil), forCellReuseIdentifier: "Nib")
+        //self.table.register(QianTableCell.self, forCellReuseIdentifier: self.reuseableCellName)
+        self.table.register(QianTableCell.classForCoder(), forCellReuseIdentifier: self.reuseableCellName)
         
         self.view.addSubview(self.table)
         
@@ -53,29 +90,18 @@ final class HuaTableController: UIViewController {
 
 
 // MARK: - UITableViewDataSource
-extension HuaTableController: UITableViewDataSource {
+extension QianTableController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableSource.count
+        return 11
     }
     
-    
-    /// 单元格内容展示信息
-    ///
-    /// - Parameters:
-    ///   - tableView: tableView description
-    ///   - indexPath: indexPath description
-    /// - Returns: return value description
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("单元格内容展示信息 UITableViewCell")
-        let source = self.tableSource[indexPath.row]
         
-        var cell = tableView.dequeueReusableCell(withIdentifier: reuseableCellName) as? HuaTableCell
+        var cell = tableView.dequeueReusableCell(withIdentifier: reuseableCellName) as? QianTableCell
         if (cell == nil) {
-            cell = HuaTableCell(style: .default, reuseIdentifier: self.reuseableCellName)
+            cell = QianTableCell(style: .default, reuseIdentifier: self.reuseableCellName)
         }
-        
-        cell?.myLabel.text = source
         return cell!
     }
     
@@ -84,22 +110,7 @@ extension HuaTableController: UITableViewDataSource {
 
 
 // MARK: - UITableViewDelegate
-extension HuaTableController: UITableViewDelegate {
-    
-    
-    /// Tells the delegate that the specified row is now selected.
-    ///
-    /// - Parameters:
-    ///   - tableView: tableView description
-    ///   - indexPath: indexPath description
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("选中第\(indexPath.row)行")
-        
-        let qian = QianTableController()
-        self.show(qian, sender: nil)
-    }
-    
-    
+extension QianTableController: UITableViewDelegate {
     /// 行内右滑：删除+分享
     ///
     /// - Parameters:
