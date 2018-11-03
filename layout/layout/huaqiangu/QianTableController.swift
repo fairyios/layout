@@ -90,6 +90,9 @@ final class QianTableController: UIViewController {
         
         //self.navigationItem.leftBarButtonItem = self.backBarButtonItem
         
+        //self.navigationItem.largeTitleDisplayMode = .never
+        self.table.separatorColor = ColorDefault.Theme
+        self.table.backgroundColor = UIColor.white
     }
     
     override func didReceiveMemoryWarning() {

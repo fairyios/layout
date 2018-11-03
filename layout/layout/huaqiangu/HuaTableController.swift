@@ -21,7 +21,7 @@ final class HuaTableController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initTableView()
-        
+         
     }
     
     override func didReceiveMemoryWarning() {

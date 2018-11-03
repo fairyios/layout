@@ -54,6 +54,7 @@ final class HuaTableCell : UITableViewCell {
         self.myStack.addSubview(self.myLabel)
         self.addSubview(self.myStack)
         self.backgroundColor = UIColor.clear
+        self.selectionStyle = .none
         
         let imageViewConstraintWidth = NSLayoutConstraint(item: self.myImageView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 60)
         let imageViewConstraintHeight = NSLayoutConstraint(item: self.myImageView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 60)
