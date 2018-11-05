@@ -45,8 +45,8 @@ final class GuTableController: UITableViewController {
         
         //设置页面标题
         self.navigationItem.title = "卡片详情"
-        //self.navigationItem.titleView?.backgroundColor = UIColor.gray c
-        self.navigationItem.titleView?.tintColor = UIColor.orange// un do
+        //self.navigationItem.titleView?.backgroundColor = UIColor.gray // un do
+        //self.navigationItem.titleView?.tintColor = UIColor.orange// un do
         
         self.tableView.tableHeaderView = self.myImageView//
         self.tableView.tableHeaderView?.frame.size.height = CGFloat(400)
