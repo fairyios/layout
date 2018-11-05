@@ -68,7 +68,10 @@ final class QianTableController: UIViewController {
         //self.navigationController?.title 是UIViewController的属性
         self.navigationController?.title = "卡片列表2"
         self.navigationController?.navigationBar.tintColor = UIColor.white
-
+//        self.navigationController?.navigationBar.largeTitleTextAttributes = [
+//            NSAttributedString.Key.foregroundColor : UIColor.orange.cgColor
+//        ] 
+        
         self.navigationItem.title = "卡片列表"
         self.navigationItem.titleView?.backgroundColor = UIColor.gray
         self.navigationItem.titleView?.tintColor = UIColor.white
@@ -124,6 +127,8 @@ final class QianTableController: UIViewController {
 // MARK: - UITableViewDataSource
 extension QianTableController: UITableViewDataSource {
     
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 11
     }
@@ -143,6 +148,22 @@ extension QianTableController: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 extension QianTableController: UITableViewDelegate {
+    
+    /// 选中第\(indexPath.row)行
+    ///
+    /// - Parameters:
+    ///   - tableView: tableView description
+    ///   - indexPath: indexPath description
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("选中第\(indexPath.row)行")
+        
+        //self.navigationItem.backBarButtonItem?.title = "" // 从这个视图跳转到另一个实图后，在另一个视图里面显示的返回title
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+        let qian = GuTableController()
+        self.show(qian, sender: nil)
+    }
+    
+    
     /// 行内右滑：删除+分享
     ///
     /// - Parameters:

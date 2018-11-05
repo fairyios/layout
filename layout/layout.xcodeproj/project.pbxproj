@@ -18,6 +18,7 @@
 		2CCB2C9C218CB93D004AA91E /* ColorDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCB2C9B218CB93D004AA91E /* ColorDefault.swift */; };
 		2CD16C81218BE6C200779BB0 /* QianTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD16C80218BE6C200779BB0 /* QianTableController.swift */; };
 		2CD16C83218BE70F00779BB0 /* QianTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD16C82218BE70F00779BB0 /* QianTableCell.swift */; };
+		2CD715CE21908E0D00309DEF /* GuTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD715CD21908E0D00309DEF /* GuTableController.swift */; };
 		2CD74EFC2182B6C400AD937B /* AreaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD74EFB2182B6C400AD937B /* AreaModel.swift */; };
 		2CD74EFE2183083C00AD937B /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD74EFD2183083C00AD937B /* DetailController.swift */; };
 		2CD905AE2189DA4700956419 /* LocalizedHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD905AD2189DA4700956419 /* LocalizedHelper.swift */; };
@@ -55,6 +56,7 @@
 		2CCB2C9B218CB93D004AA91E /* ColorDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDefault.swift; sourceTree = "<group>"; };
 		2CD16C80218BE6C200779BB0 /* QianTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QianTableController.swift; sourceTree = "<group>"; };
 		2CD16C82218BE70F00779BB0 /* QianTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QianTableCell.swift; sourceTree = "<group>"; };
+		2CD715CD21908E0D00309DEF /* GuTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuTableController.swift; sourceTree = "<group>"; };
 		2CD74EFB2182B6C400AD937B /* AreaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaModel.swift; sourceTree = "<group>"; };
 		2CD74EFD2183083C00AD937B /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		2CD905AD2189DA4700956419 /* LocalizedHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedHelper.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				2CDB445F218B5DCF0003E6BA /* HuaTableCell.swift */,
 				2CD16C82218BE70F00779BB0 /* QianTableCell.swift */,
 				2CD16C80218BE6C200779BB0 /* QianTableController.swift */,
+				2CD715CD21908E0D00309DEF /* GuTableController.swift */,
 			);
 			path = huaqiangu;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				2CD74EFE2183083C00AD937B /* DetailController.swift in Sources */,
 				2CDB4460218B5DCF0003E6BA /* HuaTableCell.swift in Sources */,
 				2C1C9D2121875BF2009F1C03 /* IosHelper.swift in Sources */,
+				2CD715CE21908E0D00309DEF /* GuTableController.swift in Sources */,
 				2C709F0C2185FB0700C60597 /* RatingController.swift in Sources */,
 				2CD905AE2189DA4700956419 /* LocalizedHelper.swift in Sources */,
 				2CAE3F3521894857006BA8D8 /* LocalSet.swift in Sources */,
