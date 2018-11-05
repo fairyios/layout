@@ -62,6 +62,30 @@ final class QianTableCell : UITableViewCell {
         return label
     }()
     
+    lazy var myEffect: UIVisualEffectView! = {
+        let effect = UIVisualEffectView()
+        effect.translatesAutoresizingMaskIntoConstraints = false
+        effect.backgroundColor =  ColorDefault.Theme
+        effect.layer.cornerRadius = CGFloat(20)
+        effect.clipsToBounds = true
+        //effect.textColor = UIColor.red
+        //effect.frame.size.width = CGFloat(50)
+        //effect.frame.size.height = CGFloat(50)
+        
+        
+        let effectHeight = NSLayoutConstraint(item: effect, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 50)
+        let effectTop = NSLayoutConstraint(item: effect, attribute: .top, relatedBy: .equal, toItem: self.myContentView, attribute: .top, multiplier: 1, constant: 200)
+        //let effectBottom = NSLayoutConstraint(item: effect, attribute: .bottom, relatedBy: .equal, toItem:  self.myContentView, attribute: .bottom, multiplier: 1, constant: 0)
+        let effectLeading = NSLayoutConstraint(item: effect, attribute: .leading, relatedBy: .equal, toItem:  self.myContentView, attribute: .leading, multiplier: 1, constant: 0)
+        let effectTrailing = NSLayoutConstraint(item: effect, attribute: .trailing, relatedBy: .equal, toItem:  self.myContentView, attribute: .trailing, multiplier: 1, constant: 0)
+        effect.addConstraints([effectHeight])
+        
+        self.myContentView.addSubview(effect)
+        self.myContentView.addConstraints([effectTop, effectLeading, effectTrailing])
+        
+        return effect
+    }()
+    
     lazy var myContentView: UIView! = {
         let contentView = UIView()
         contentView.translatesAutoresizingMaskIntoConstraints = false
@@ -102,7 +126,7 @@ final class QianTableCell : UITableViewCell {
         self.selectionStyle = .none
         
         let _ = self.myImageView
-        let _ = self.myLabel
+        let _ = self.myEffect
         
     }
     
