@@ -67,10 +67,9 @@ final class QianTableController: UIViewController {
         
         //self.navigationController?.title 是UIViewController的属性
         self.navigationController?.title = "卡片列表2" //tab bar 的title
-        
-//        self.navigationController?.navigationBar.largeTitleTextAttributes = [
-//            NSAttributedString.Key.foregroundColor : UIColor.orange.cgColor
-//        ]
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [
+            NSAttributedString.Key.foregroundColor : UIColor.gray.cgColor
+        ]
         
         //设置页面标题
         self.navigationItem.title = "卡片列表"
@@ -162,6 +161,11 @@ extension QianTableController: UITableViewDelegate {
         //self.navigationItem.backBarButtonItem?.title = "" // 从这个视图跳转到另一个实图后，在另一个视图里面显示的返回title
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "返回卡片列表", style: .plain, target: self, action: nil)
         self.navigationController?.navigationBar.tintColor = UIColor.orange //设置导航栏的返回按钮颜色
+        //将导航栏条透明
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        //不调整与顶边的间距，因为此时导航条已经透明 
+        
         let qian = GuTableController()
         self.show(qian, sender: nil)
     }
