@@ -45,6 +45,16 @@ final class QianTableCell : UITableViewCell {
         //label.frame.size.width = CGFloat(50)
         //label.frame.size.height = CGFloat(50)
         label.text = "花v千骨vv花v千骨vv"
+        
+        
+        let labelHeight = NSLayoutConstraint(item: label, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 50)
+        let labelTop = NSLayoutConstraint(item: label, attribute: .top, relatedBy: .equal, toItem: self.myContentView, attribute: .top, multiplier: 1, constant: 0)
+        //let labelBottom = NSLayoutConstraint(item: label, attribute: .bottom, relatedBy: .equal, toItem:  self.myContentView, attribute: .bottom, multiplier: 1, constant: 0)
+        let labelLeading = NSLayoutConstraint(item: label, attribute: .leading, relatedBy: .equal, toItem:  self.myContentView, attribute: .leading, multiplier: 1, constant: 0)
+        let labelTrailing = NSLayoutConstraint(item: label, attribute: .trailing, relatedBy: .equal, toItem:  self.myContentView, attribute: .trailing, multiplier: 1, constant: 0)
+        label.addConstraints([labelHeight])
+        self.myContentView.addConstraints([labelTop, labelLeading, labelTrailing])
+        
         return label
     }()
     
@@ -85,23 +95,7 @@ final class QianTableCell : UITableViewCell {
         
         
         
-        let labelHeight = NSLayoutConstraint(item: self.myLabel, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 50)
-        self.myLabel.addConstraints([labelHeight])
         
-        let labelTop = NSLayoutConstraint(item: self.myLabel, attribute: .top, relatedBy: .equal, toItem: self.myContentView, attribute: .top, multiplier: 1, constant: 0)
-        //let labelBottom = NSLayoutConstraint(item: self.myLabel, attribute: .bottom, relatedBy: .equal, toItem:  self.myContentView, attribute: .bottom, multiplier: 1, constant: 0)
-        let labelLeading = NSLayoutConstraint(item: self.myLabel, attribute: .leading, relatedBy: .equal, toItem:  self.myContentView, attribute: .leading, multiplier: 1, constant: 0)
-        let labelTrailing = NSLayoutConstraint(item: self.myLabel, attribute: .trailing, relatedBy: .equal, toItem:  self.myContentView, attribute: .trailing, multiplier: 1, constant: 0)
-        self.myContentView.addConstraints([labelTop, labelLeading, labelTrailing])
-        
-        
-//        let stackLeading = NSLayoutConstraint(item: self.myStack, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1, constant: 50)
-//        let stackTrailing = NSLayoutConstraint(item: self.myStack, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1, constant: -50)
-//        let stackTop = NSLayoutConstraint(item: self.myStack, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 20)
-//        let stackButtom = NSLayoutConstraint(item: self.myStack, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1, constant: -20)
-//        self.addConstraints([stackLeading, stackTrailing, stackTop, stackButtom])
-//        //self.prepareForReuse()
-//        //self.sizeToFit()
 
         let stackWidth = NSLayoutConstraint(item: self.myContentView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 300)
         let stackHeight = NSLayoutConstraint(item: self.myContentView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: CGFloat(self.rowHeightCell - 40))
