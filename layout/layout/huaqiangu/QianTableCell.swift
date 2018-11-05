@@ -25,6 +25,12 @@ final class QianTableCell : UITableViewCell {
         imageView.layer.cornerRadius = CGFloat(20)
         imageView.clipsToBounds = true//设置为true，阴影失效
         
+        let imageTop = NSLayoutConstraint(item: imageView, attribute: .top, relatedBy: .equal, toItem: self.myContentView, attribute: .top, multiplier: 1, constant: 0)
+        let imageBottom = NSLayoutConstraint(item: imageView, attribute: .bottom, relatedBy: .equal, toItem: self.myContentView, attribute: .bottom, multiplier: 1, constant: 0)
+        let imageLeading = NSLayoutConstraint(item: imageView, attribute: .leading, relatedBy: .equal, toItem: self.myContentView, attribute: .leading, multiplier: 1, constant: 0)
+        let imageTrailing = NSLayoutConstraint(item: imageView, attribute: .trailing, relatedBy: .equal, toItem: self.myContentView, attribute: .trailing, multiplier: 1, constant: 0)
+        self.myContentView.addConstraints([imageTop, imageBottom, imageLeading, imageTrailing])
+        
         
         return imageView
     }()
@@ -77,11 +83,6 @@ final class QianTableCell : UITableViewCell {
 //        let imageViewConstraintHeight = NSLayoutConstraint(item: self.myImageView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 200)
 //        self.myImageView.addConstraints([imageViewConstraintWidth, imageViewConstraintHeight])
         
-        let imageTop = NSLayoutConstraint(item: self.myImageView, attribute: .top, relatedBy: .equal, toItem: self.myContentView, attribute: .top, multiplier: 1, constant: 0)
-        let imageBottom = NSLayoutConstraint(item: self.myImageView, attribute: .bottom, relatedBy: .equal, toItem: self.myContentView, attribute: .bottom, multiplier: 1, constant: 0)
-        let imageLeading = NSLayoutConstraint(item: self.myImageView, attribute: .leading, relatedBy: .equal, toItem: self.myContentView, attribute: .leading, multiplier: 1, constant: 0)
-        let imageTrailing = NSLayoutConstraint(item: self.myImageView, attribute: .trailing, relatedBy: .equal, toItem: self.myContentView, attribute: .trailing, multiplier: 1, constant: 0)
-        self.myContentView.addConstraints([imageTop, imageBottom, imageLeading, imageTrailing])
         
         
         let labelHeight = NSLayoutConstraint(item: self.myLabel, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 50)
