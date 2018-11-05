@@ -21,9 +21,9 @@ final class QianTableController: UIViewController {
     convenience init(backBarButtonItem preBackItem: UIBarButtonItem?) {
         self.init()
         
-        debugPrint("preBackItem ?? Any.self")
-        debugPrint(preBackItem ?? Any.self)
-        self.backBarButtonItem = preBackItem!
+        //debugPrint("preBackItem ?? Any.self")
+        //debugPrint(preBackItem ?? Any.self)
+        //self.backBarButtonItem = preBackItem!
     }
     
 //    required init?(coder aDecoder: NSCoder) {
@@ -66,12 +66,13 @@ final class QianTableController: UIViewController {
         debugPrint(self.navigationItem.titleView?.tintColor ?? (Any).self)
         
         //self.navigationController?.title 是UIViewController的属性
-        self.navigationController?.title = "卡片列表2"
-        self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationController?.title = "卡片列表2" //tab bar 的title
+        
 //        self.navigationController?.navigationBar.largeTitleTextAttributes = [
 //            NSAttributedString.Key.foregroundColor : UIColor.orange.cgColor
-//        ] 
+//        ]
         
+        //设置页面标题
         self.navigationItem.title = "卡片列表"
         self.navigationItem.titleView?.backgroundColor = UIColor.gray
         self.navigationItem.titleView?.tintColor = UIColor.white
@@ -94,8 +95,7 @@ final class QianTableController: UIViewController {
         //self.navigationItem.leftBarButtonItem = self.backBarButtonItem
         
         //self.navigationItem.largeTitleDisplayMode = .never
-        self.table.separatorColor = ColorDefault.Theme
-        self.table.backgroundColor = UIColor.white
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -109,8 +109,9 @@ final class QianTableController: UIViewController {
         self.table.backgroundColor = UIColor.clear
         self.table.frame = self.view.frame
         self.table.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        self.table.separatorColor = UIColor.orange
         self.table.separatorStyle = .singleLine
+        self.table.separatorColor = ColorDefault.Theme
+        self.table.backgroundColor = UIColor.white
         self.table.dataSource = self
         self.table.delegate = self
         //self.table.register(UINib(nibName: "QianTableCell", bundle: nil), forCellReuseIdentifier: "Nib")
@@ -157,8 +158,10 @@ extension QianTableController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("选中第\(indexPath.row)行")
         
+        ///设置导航栏
         //self.navigationItem.backBarButtonItem?.title = "" // 从这个视图跳转到另一个实图后，在另一个视图里面显示的返回title
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "返回卡片列表", style: .plain, target: self, action: nil)
+        self.navigationController?.navigationBar.tintColor = UIColor.orange //设置导航栏的返回按钮颜色
         let qian = GuTableController()
         self.show(qian, sender: nil)
     }

@@ -93,9 +93,11 @@ extension HuaTableController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("选中第\(indexPath.row)行")
         
+        //设置导航栏
+        self.navigationController?.navigationBar.tintColor = UIColor.red //设置导航栏的返回按钮颜色
         //self.navigationItem.backBarButtonItem?.title = "" // 从这个视图跳转到另一个实图后，在另一个视图里面显示的返回title
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
-        let qian = QianTableController(backBarButtonItem: self.navigationItem.backBarButtonItem)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "返回花千骨", style: .plain, target: self, action: nil)
+        let qian = QianTableController()
         self.show(qian, sender: nil)
     }
     
