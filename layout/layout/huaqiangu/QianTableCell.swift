@@ -40,32 +40,33 @@ final class QianTableCell : UITableViewCell {
     lazy var myLabel: UILabel! = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.backgroundColor = ColorDefault.Theme
+        label.backgroundColor = UIColor.clear// ColorDefault.Theme
         label.layer.cornerRadius = CGFloat(20)
         label.clipsToBounds = true
         //label.textColor = UIColor.red
         //label.frame.size.width = CGFloat(50)
         //label.frame.size.height = CGFloat(50)
         label.text = "花v千骨vv花v千骨vv"
+        label.textAlignment  = .center
         
         
-        let labelHeight = NSLayoutConstraint(item: label, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 50)
-        let labelTop = NSLayoutConstraint(item: label, attribute: .top, relatedBy: .equal, toItem: self.myContentView, attribute: .top, multiplier: 1, constant: 0)
-        //let labelBottom = NSLayoutConstraint(item: label, attribute: .bottom, relatedBy: .equal, toItem:  self.myContentView, attribute: .bottom, multiplier: 1, constant: 0)
-        let labelLeading = NSLayoutConstraint(item: label, attribute: .leading, relatedBy: .equal, toItem:  self.myContentView, attribute: .leading, multiplier: 1, constant: 0)
-        let labelTrailing = NSLayoutConstraint(item: label, attribute: .trailing, relatedBy: .equal, toItem:  self.myContentView, attribute: .trailing, multiplier: 1, constant: 0)
-        label.addConstraints([labelHeight])
+        //let labelHeight = NSLayoutConstraint(item: label, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 50)
+        let labelTop = NSLayoutConstraint(item: label, attribute: .top, relatedBy: .equal, toItem: self.myEffect.contentView, attribute: .top, multiplier: 1, constant: 0)
+        let labelBottom = NSLayoutConstraint(item: label, attribute: .bottom, relatedBy: .equal, toItem:  self.myEffect.contentView, attribute: .bottom, multiplier: 1, constant: 0)
+        let labelLeading = NSLayoutConstraint(item: label, attribute: .leading, relatedBy: .equal, toItem:  self.myEffect.contentView, attribute: .leading, multiplier: 1, constant: 0)
+        let labelTrailing = NSLayoutConstraint(item: label, attribute: .trailing, relatedBy: .equal, toItem:  self.myEffect.contentView, attribute: .trailing, multiplier: 1, constant: 0)
         
-        self.myContentView.addSubview(label)
-        self.myContentView.addConstraints([labelTop, labelLeading, labelTrailing])
+        self.myEffect.contentView.addSubview(label)
+        self.myEffect.contentView.addConstraints([labelTop, labelBottom, labelLeading, labelTrailing])
         
         return label
     }()
     
     lazy var myEffect: UIVisualEffectView! = {
-        let effect = UIVisualEffectView()
+        let blur = UIBlurEffect(style: UIBlurEffect.Style.regular)
+        let effect = UIVisualEffectView(effect: blur)
         effect.translatesAutoresizingMaskIntoConstraints = false
-        effect.backgroundColor =  ColorDefault.Theme
+        effect.backgroundColor = UIColor.clear// ColorDefault.Theme
         effect.layer.cornerRadius = CGFloat(20)
         effect.clipsToBounds = true
         //effect.textColor = UIColor.red
@@ -74,7 +75,7 @@ final class QianTableCell : UITableViewCell {
         
         
         let effectHeight = NSLayoutConstraint(item: effect, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 50)
-        let effectTop = NSLayoutConstraint(item: effect, attribute: .top, relatedBy: .equal, toItem: self.myContentView, attribute: .top, multiplier: 1, constant: 200)
+        let effectTop = NSLayoutConstraint(item: effect, attribute: .top, relatedBy: .equal, toItem: self.myContentView, attribute: .top, multiplier: 1, constant: 350)
         //let effectBottom = NSLayoutConstraint(item: effect, attribute: .bottom, relatedBy: .equal, toItem:  self.myContentView, attribute: .bottom, multiplier: 1, constant: 0)
         let effectLeading = NSLayoutConstraint(item: effect, attribute: .leading, relatedBy: .equal, toItem:  self.myContentView, attribute: .leading, multiplier: 1, constant: 0)
         let effectTrailing = NSLayoutConstraint(item: effect, attribute: .trailing, relatedBy: .equal, toItem:  self.myContentView, attribute: .trailing, multiplier: 1, constant: 0)
@@ -126,7 +127,7 @@ final class QianTableCell : UITableViewCell {
         self.selectionStyle = .none
         
         let _ = self.myImageView
-        let _ = self.myEffect
+        let _ = self.myLabel
         
     }
     
