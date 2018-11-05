@@ -43,22 +43,22 @@ final class QianTableCell : UITableViewCell {
     }()
     
     lazy var myContentView: UIView! = {
-        let stack = UIView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.backgroundColor = UIColor.orange
-        stack.layer.cornerRadius = 20
-        //stack.clipsToBounds = true
+        let contentView = UIView()
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+        contentView.backgroundColor = UIColor.orange
+        contentView.layer.cornerRadius = 20
+        //contentView.clipsToBounds = true
         
-        stack.layer.borderWidth = CGFloat(1.0)
-        stack.layer.borderColor = ColorDefault.Theme.cgColor
-        stack.layer.shadowColor = ColorDefault.Theme.cgColor// ColorDefault.Theme.cgColor// UIColor.red.cgColor
-        stack.layer.shadowRadius = CGFloat(15)
-        stack.layer.shadowOpacity = 1.0
-        stack.layer.shadowOffset = CGSize(width: 0, height: 0)
-        //stack.layer.shadowPath = UIBezierPath.init(roundedRect: self.bounds, cornerRadius: 5).cgPath
-        //stack.layer.contents = UIScreen.main.scale
+        contentView.layer.borderWidth = CGFloat(1.0)
+        contentView.layer.borderColor = ColorDefault.Theme.cgColor
+        contentView.layer.shadowColor = ColorDefault.Theme.cgColor// ColorDefault.Theme.cgColor// UIColor.red.cgColor
+        contentView.layer.shadowRadius = CGFloat(15)
+        contentView.layer.shadowOpacity = 1.0
+        contentView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        //contentView.layer.shadowPath = UIBezierPath.init(roundedRect: self.bounds, cornerRadius: 5).cgPath
+        //contentView.layer.contents = UIScreen.main.scale
         
-        return stack
+        return contentView
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
