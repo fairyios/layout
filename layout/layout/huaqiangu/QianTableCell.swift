@@ -29,6 +29,8 @@ final class QianTableCell : UITableViewCell {
         let imageBottom = NSLayoutConstraint(item: imageView, attribute: .bottom, relatedBy: .equal, toItem: self.myContentView, attribute: .bottom, multiplier: 1, constant: 0)
         let imageLeading = NSLayoutConstraint(item: imageView, attribute: .leading, relatedBy: .equal, toItem: self.myContentView, attribute: .leading, multiplier: 1, constant: 0)
         let imageTrailing = NSLayoutConstraint(item: imageView, attribute: .trailing, relatedBy: .equal, toItem: self.myContentView, attribute: .trailing, multiplier: 1, constant: 0)
+        
+        self.myContentView.addSubview(imageView)
         self.myContentView.addConstraints([imageTop, imageBottom, imageLeading, imageTrailing])
         
         
@@ -53,6 +55,8 @@ final class QianTableCell : UITableViewCell {
         let labelLeading = NSLayoutConstraint(item: label, attribute: .leading, relatedBy: .equal, toItem:  self.myContentView, attribute: .leading, multiplier: 1, constant: 0)
         let labelTrailing = NSLayoutConstraint(item: label, attribute: .trailing, relatedBy: .equal, toItem:  self.myContentView, attribute: .trailing, multiplier: 1, constant: 0)
         label.addConstraints([labelHeight])
+        
+        self.myContentView.addSubview(label)
         self.myContentView.addConstraints([labelTop, labelLeading, labelTrailing])
         
         return label
@@ -80,14 +84,16 @@ final class QianTableCell : UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        print(String(describing: QianTableCell.self))
+        //print(String(describing: QianTableCell.self))
         //print(String(describing: self.myImageView))
         
-        self.myContentView.addSubview(self.myImageView)
-        self.myContentView.addSubview(self.myLabel)
-        self.addSubview(self.myContentView)
+         
         self.backgroundColor = UIColor.white
         self.selectionStyle = .none
+        self.addSubview(self.myContentView)
+        
+        let _ = self.myImageView
+        let _ = self.myLabel
         
 //        let imageViewConstraintWidth = NSLayoutConstraint(item: self.myImageView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 150)
 //        let imageViewConstraintHeight = NSLayoutConstraint(item: self.myImageView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 200)
@@ -97,12 +103,12 @@ final class QianTableCell : UITableViewCell {
         
         
 
-        let stackWidth = NSLayoutConstraint(item: self.myContentView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 300)
-        let stackHeight = NSLayoutConstraint(item: self.myContentView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: CGFloat(self.rowHeightCell - 40))
-        let stackCenterX = NSLayoutConstraint(item: self.myContentView, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0)
-        let stackCenterY = NSLayoutConstraint(item: self.myContentView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0)
-        self.myContentView.addConstraints([stackWidth, stackHeight])
-        self.addConstraints([stackCenterX, stackCenterY])
+        let myContentViewWidth = NSLayoutConstraint(item: self.myContentView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 300)
+        let myContentViewHeight = NSLayoutConstraint(item: self.myContentView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: CGFloat(self.rowHeightCell - 40))
+        let myContentViewCenterX = NSLayoutConstraint(item: self.myContentView, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0)
+        let myContentViewCenterY = NSLayoutConstraint(item: self.myContentView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0)
+        self.myContentView.addConstraints([myContentViewWidth, myContentViewHeight])
+        self.addConstraints([myContentViewCenterX, myContentViewCenterY])
         //self.prepareForReuse()
         //self.sizeToFit()
   
