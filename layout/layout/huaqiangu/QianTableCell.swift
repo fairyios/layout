@@ -78,6 +78,17 @@ final class QianTableCell : UITableViewCell {
         //contentView.layer.shadowPath = UIBezierPath.init(roundedRect: self.bounds, cornerRadius: 5).cgPath
         //contentView.layer.contents = UIScreen.main.scale
         
+        
+        let myContentViewWidth = NSLayoutConstraint(item: contentView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 300)
+        let myContentViewHeight = NSLayoutConstraint(item: contentView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: CGFloat(self.rowHeightCell - 40))
+        let myContentViewCenterX = NSLayoutConstraint(item: contentView, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0)
+        let myContentViewCenterY = NSLayoutConstraint(item: contentView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0)
+        contentView.addConstraints([myContentViewWidth, myContentViewHeight])
+        self.addSubview(contentView)
+        self.addConstraints([myContentViewCenterX, myContentViewCenterY])
+        //self.prepareForReuse()
+        //self.sizeToFit()
+        
         return contentView
     }()
     
@@ -87,31 +98,11 @@ final class QianTableCell : UITableViewCell {
         //print(String(describing: QianTableCell.self))
         //print(String(describing: self.myImageView))
         
-         
         self.backgroundColor = UIColor.white
         self.selectionStyle = .none
-        self.addSubview(self.myContentView)
         
         let _ = self.myImageView
         let _ = self.myLabel
-        
-//        let imageViewConstraintWidth = NSLayoutConstraint(item: self.myImageView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 150)
-//        let imageViewConstraintHeight = NSLayoutConstraint(item: self.myImageView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 200)
-//        self.myImageView.addConstraints([imageViewConstraintWidth, imageViewConstraintHeight])
-        
-        
-        
-        
-
-        let myContentViewWidth = NSLayoutConstraint(item: self.myContentView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 300)
-        let myContentViewHeight = NSLayoutConstraint(item: self.myContentView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: CGFloat(self.rowHeightCell - 40))
-        let myContentViewCenterX = NSLayoutConstraint(item: self.myContentView, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0)
-        let myContentViewCenterY = NSLayoutConstraint(item: self.myContentView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0)
-        self.myContentView.addConstraints([myContentViewWidth, myContentViewHeight])
-        self.addConstraints([myContentViewCenterX, myContentViewCenterY])
-        //self.prepareForReuse()
-        //self.sizeToFit()
-  
         
     }
     
